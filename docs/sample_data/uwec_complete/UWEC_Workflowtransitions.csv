@@ -1,0 +1,26 @@
+ID,Workflow,Label,Machine name,X,Dev,QA,From state,To state,Notes
+,Marketing,Create New Draft,create_new_draft,a,,,Draft,Draft,Marketing editor and site admin can use
+,Marketing,Create New Draft,create_new_draft,a,,,In review,Draft,Marketing editor and site admin can use
+,Marketing,Create New Draft,create_new_draft,a,,,Published,Draft,Marketing editor and site admin can use
+,Marketing,Create New Draft,create_new_draft,a,,,Archived,Draft,Marketing editor and site admin can use
+,Marketing,Send to review,review,a,,,Draft,In review,Marketing editor and site admin can use
+,Marketing,Send to review,review,a,,,In review,In review,Marketing editor and site admin can use
+,Marketing,Send to review,review,a,,,Published,In review,Marketing editor and site admin can use
+,Marketing,Send to review,review,a,,,Archived,In review,Marketing editor and site admin can use
+,Marketing,Publish,publish,a,,,Draft,Published,Site admin can use
+,Marketing,Publish,publish,a,,,In review,Published,Site admin can use
+,Marketing,Publish,publish,a,,,Published,Published,Site admin can use
+,Marketing,Publish,publish,a,,,Archived,Published,Site admin can use
+,Marketing,Archive,archive,a,,,Draft,Archived,Site admin can use
+,Marketing,Archive,archive,a,,,In review,Archived,Site admin can use
+,Marketing,Archive,archive,a,,,Published,Archived,Site admin can use
+,Marketing,Archive,archive,a,,,Archived,Archived,Site admin can use
+,Non-moderated,Create New Draft,create_new_draft,a,,,Draft,Draft,All roles except marketing editor can use
+,Non-moderated,Create New Draft,create_new_draft,a,,,Published,Draft,All roles except marketing editor can use
+,Non-moderated,Create New Draft,create_new_draft,a,,,Archived,Draft,All roles except marketing editor can use
+,Non-moderated,Publish,publish,a,,,Draft,Published,All roles except marketing editor can use
+,Non-moderated,Publish,publish,a,,,Published,Published,All roles except marketing editor can use
+,Non-moderated,Publish,publish,a,,,Archived,Published,All roles except marketing editor can use
+,Non-moderated,Archive,archive,a,,,Draft,Archived,All roles except marketing editor can use
+,Non-moderated,Archive,archive,a,,,Published,Archived,All roles except marketing editor can use
+,Non-moderated,Archive,archive,a,,,Archived,Archived,All roles except marketing editor can use

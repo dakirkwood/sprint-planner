@@ -1,0 +1,617 @@
+ID,Bundle,Field label,Machine name,Reused Field,X,Dev,QA,Field group,Field type,Ref. bundle,Req'd,Vals.,Form widget,Trns.,Settings/notes,Help text,Bundle machine name
+,Academic Program (Content type),Title,-,-,a,,,,Entity label,,-,-,Textfield,n,,,academic_program
+,Academic Program (Content type),Meta Description,field_meta_description,y,a,,,,"Text (plain, long)",,y,1,Text area (multiple rows),n,"Set as metatag abstract, not shown on node",,academic_program
+,Academic Program (Content type),Program Image,field_image,y,a,,,,Entity reference,Image (Media type),n,1,Media library,n,Render as 730x840,<strong>Optimal image size:</strong> 1460x1680px,academic_program
+,Academic Program (Content type),Intro text,field_intro_text,y,a,,,,"Text (formatted, long, with summary)",,y,1,Text area (multiple rows),n,"Limited HTML allowed. Use custom metatag setup to include intro instead of body, update site search to index intro field and show that in plce of body for programs.",,academic_program
+,Academic Program (Content type),Available as,field_program_type,n,a,,,,Entity reference,Program Types (Vocabulary),y,*,Select list,n,"Options: Major, Minor, Certificate.  Use twig to count the number of entries and add commas/or as needed to match mockups.",,academic_program
+,Academic Program (Content type),Tuition info,field_tuition_link,n,a,,,,Link,,y,1,Link,n,"Internal or external, no link text, add default page on dev and set this as default value",,academic_program
+,Academic Program (Content type),Admissions requirements,field_admissions_requirements,n,a,,,,Link,,y,1,Link,n,"Internal or external, no link text, add default page on dev and set this as default value",,academic_program
+,Academic Program (Content type),Description,body,y,a,,,,"Text (formatted, long, with summary)",,n,1,Text area with a summary,n,"Limited HTML allowed, no summary",Always start with an H2 headline.,academic_program
+,Academic Program (Content type),Degree types,field_degree_types,n,a,,,Program Details,Entity reference,Degree Type (Vocabulary),y,*,Text area (multiple rows),n,,,academic_program
+,Academic Program (Content type),Degree Level,field_degree_level,n,a,,,Program Details,List (text),,y,1,Select list,n,"Options: Graduate, Undergraduate",,academic_program
+,Academic Program (Content type),Program length,field_program_length,n,a,,,Program Details,Text (plain),,n,1,Select list,n,,,academic_program
+,Academic Program (Content type),Campus,field_campus,n,a,,,Program Details,Entity reference,Campuses (Vocabulary),y,1,Select list,n,,,academic_program
+,Academic Program (Content type),In-person or online,field_delivery_mode,n,a,,,Program Details,Entity reference,Modes of Delivery (Vocabulary),y,1,Select list,n,,,academic_program
+,Academic Program (Content type),Requires a minor,field_minor_required,n,a,,,Program Details,Boolean,,n,1,Single on/off checkbox,n,,,academic_program
+,Academic Program (Content type),College,field_college,n,a,,,Program Details,Entity reference,College (Content type),n,1,Autocomplete,n,,,academic_program
+,Academic Program (Content type),Departments,field_departments,y,a,,,Program Details,Entity reference,Department (Content type),n,*,Autocomplete,n,,,academic_program
+,Academic Program (Content type),Accreditation information,field_accreditation,n,a,,,Program Details,"Text (formatted, long, with summary)",,n,1,Text area (multiple rows),n,"Some programs will have no accreditation logo (acred then goes textMax but stuck to left), some will have licensure but no accred.  There should never be licensure with a logo.",,academic_program
+,Academic Program (Content type),Accreditation logo,field_accreditation_logo,n,a,,,Program Details,Entity reference,Image (Media type),n,1,Media library,n,Render as 200x200 Non Crop,<strong>Optimal image size:</strong> 400px wide,academic_program
+,Academic Program (Content type),Licensure information,field_licensure,n,a,,,Program Details,"Text (formatted, long, with summary)",,y,1,Text area (multiple rows),n,,,academic_program
+,Academic Program (Content type),Hallmarks,field_hallmarks,y,a,,,,Entity Reference Revisions (paragraphs),Hallmark (Paragraph type),y,5,Paragraphs Stable,n,"Closed, Preview, No Autocollapse, Buttons, Default form display, No default paragraph, Only collapse/edit all enabled. Only hallmarks allowed",,academic_program
+,Academic Program (Content type),Content Carousel,field_content_carousel,y,a,,,,Entity Reference Revisions (paragraphs),,y,5,Paragraphs Stable,n,"Closed, Preview, No Autocollapse, Buttons, Default form display, No default paragraph, Only collapse/edit all enabled. Only content carousel allowed.",,academic_program
+,Academic Program (Content type),Facts List,field_facts_list,y,a,,,,Entity Reference Revisions (paragraphs),Facts List (Paragraph type),y,1,Paragraphs Stable,n,"Closed, Preview, No Autocollapse, Buttons, Default form display, No default paragraph, Only collapse/edit all enabled. Only facts allowed.",,academic_program
+,Academic Program (Content type),Flex Content,field_paragraphs,n,a,,,,Entity Reference Revisions (paragraphs),,n,*,Layout Paragraphs,n,"Preview mode is preview. 0 nesting level. All parent paragraphs allowed except contact, hours, events list, fact lists, stories list, profiles list, social media, quote, hallmark, hero, content carousel.",,academic_program
+,Academic Program (Content type),Outcomes Image,field_outcomes_image,n,a,,,Outcomes,Entity reference,Image (Media type),n,1,Media library,n,Render as 874x492,<strong>Optimal image size:</strong> 1748x984px,academic_program
+,Academic Program (Content type),What can I do,field_outcome_text,n,a,,,Outcomes,"Text (formatted, long)",,n,1,Text area (multiple rows),n,Limited HTML allowed.,Always start with an H2 headline.,academic_program
+,Academic Program (Content type),Example Careers,field_example_careers,n,a,,,Outcomes,Text (plain),,n,*,Textfield,n,,,academic_program
+,Academic Program (Content type),Recent Graduates,field_grads,n,a,,,Outcomes,"Text (formatted, long)",,n,*,Text area (multiple rows),n,Short formatted allowed ,,academic_program
+,Academic Program (Content type),Courses information,field_courses_text,n,a,,,Courses,"Text (formatted, long)",,n,1,Text area (multiple rows),n,,Always start with an H2 headline.,academic_program
+,Academic Program (Content type),Courses,field_courses,n,a,,,Courses,Text (plain),,n,3,Textfield,n,,Manually select courses to show using their course number.  <strong>Example:</strong>hist 205</strong></br>If no courses are manually selected three courses will be shown at random.,academic_program
+,Academic Program (Content type),Get More Info,field_request_for_info,n,a,,,More Info,Boolean,,n,1,Single on/off checkbox,n,"If yes, add slate form. Get more info and description text are hard coded in template.",,academic_program
+,Academic Program (Content type),Slate Slug,field_slate_slug,n,a,,,More Info,Text (plain),,n,1,Textfield,n,,Paste in the slug that Slate uses for the form.,academic_program
+,Academic Program (Content type),Faculty Link,field_faculty_link,y,a,,,,Link,,n,1,Link,n,"Internal links only, no link text.",,academic_program
+,Academic Program (Content type),Related Programs,field_related_programs,n,a,,,,Entity reference,Academic Program (Content type),n,*,Autocomplete,n,Render as thumbnail view mode,,academic_program
+,Academic Program (Content type),What's Next,field_whats_next,n,a,,,,Entity reference,Reusable Widgets (Custom block type),y,1,Select list,n,,,academic_program
+,Academic Program (Content type),Search Keywords,field_keywords,n,a,,,,Text (plain),,n,*,Textfield,n,"Used with 21 weight in program search index, not displayed on node",,academic_program
+,Academic Program (Content type),List Widget,field_list_widget,y,a,,,,Entity reference,List Widgets (Vocabulary),y,1,Select list,n,Program term selected by default. Field hidden from node form.,,academic_program
+,Academic Program (Content type),Placement tags,field_placement_tags,y,d,,,,Entity reference,Placement Tags (Vocabulary),y,*,Autocomplete,n,,,academic_program
+,Academic Program (Content type),Page families,field_page_families,y,d,,,,Entity reference,Page Families (Vocabulary),n,*,Autocomplete,n,,,academic_program
+,Academic Program (Content type),Editorial Access,field_editorial_access,y,a,x,,,Entity reference,Editorial Access (Vocabulary),y,*,Check boxes/radio buttons,n,,,academic_program
+,Academic Program (Content type),Domain Source,field_domain_source,y,a,x,,,Entity reference,,y,1,Select list,n,,,academic_program
+,Academic Program (Content type),Domain Record,field_domain_record,y,a,x,,,Entity reference,,y,1,Check boxes/radio buttons,n,,,academic_program
+,Academic Program (Content type),Send to all affiliates,field_domain_all_affiliates,y,a,x,,,Boolean,,n,1,Single on/off checkbox,n,,,academic_program
+,Academic Program (Content type),Metatags,field_metatags,y,a,,,,Meta tags,,n,1,Advanced meta tags form,n,,,academic_program
+,,,,,,,,,,,,,,,,,#VALUE!
+,Announcement (Content type),Title,-,-,a,,,,Entity label,,-,-,Textfield,n,,,announcement
+,Announcement (Content type),Text,body,y,a,,,,"Text (formatted, long, with summary)",,n,1,Text area with a summary,n,"Limited HTML allowed, no summary",,announcement
+,Announcement (Content type),Display Range,dates,n,a,,,,Smart date range,,y,1,Smart Date and time range,n,"Date and time, all day option.",,announcement
+,Announcement (Content type),Urgency,field_urgency,n,a,,,,List (text),,y,1,Select list,n,"Options: Urgent, Casual. Should be used a class on the announcement view blocks for theming.",,announcement
+,Announcement (Content type),Sitewide,field_sitewide,n,d,,,,Boolean,,n,1,Single on/off checkbox,n,,,announcement
+,Announcement (Content type),By Section URL,field_section_url,n,a,,,,Text (plain),,n,*,Textfield,n,Enter the URL section path(s) you want this announcement displayed on. <strong>Example: <code>/admissions/</code></strong>  will display the announcement on all pages starting with <code>/admissions/</code>. Each path must start <em>and</em> end with a <code>/</code> character. Leave blank to show this announcement on <em>all</em> pages.,Enter the URL section path(s) you want this announcement displayed on. <strong>Example: /admissions/*</strong>  will display the announcement on all pages starting with /admissions,announcement
+,Announcement (Content type),Editorial Access,field_editorial_access,y,d,x,,,Entity reference,Editorial Access (Vocabulary),y,*,Check boxes/radio buttons,n,Default to the top level access term.,,announcement
+,Announcement (Content type),Domain Source,field_domain_source,y,a,x,,,Entity reference,,y,1,Select list,n,,,announcement
+,Announcement (Content type),Domain Record,field_domain_record,y,a,x,,,Entity reference,,y,1,Check boxes/radio buttons,n,,,announcement
+,Announcement (Content type),Send to all affiliates,field_domain_all_affiliates,y,a,x,,,Boolean,,n,1,Single on/off checkbox,n,,,announcement
+,,,,,,,,,,,,,,,,,#VALUE!
+,College (Content type),Title,-,-,a,,,,Entity label,,-,-,Textfield,n,,,college
+,College (Content type),Subtitle,field_subtitle,y,a,,,,Text (plain),,y,1,Textfield,n,Render as H2,,college
+,College (Content type),Meta Description,field_meta_description,y,a,,,,"Text (plain, long)",,y,1,Text area (multiple rows),n,"Set as metatag abstract, not shown on node",,college
+,College (Content type),Intro text,field_intro_text,y,a,,,,"Text (formatted, long, with summary)",,y,1,Text area (multiple rows),n,Limited HTML allowed. Use custom metatag setup to include intro instead of body.,,college
+,College (Content type),College Image,field_image,y,a,,,,Entity reference,Image (Media type),n,1,Media library,n,,<strong>Optimal image size:</strong> 1460x1680px,college
+,College (Content type),Placement tag,field_placement_tag,y,d,,,,Entity reference,Placement Tags (Vocabulary),y,1,Autocomplete,n,,,college
+,College (Content type),Description,body,y,a,,,,"Text (formatted, long, with summary)",,n,1,Text area with a summary,n,"Limited HTML allowed, no summary",Always start with an H2 headline.,college
+,College (Content type),Departments,field_departments,y,d,,,,Entity reference,Department (Content type),n,,,,,,college
+,College (Content type),Flex Content,field_paragraphs,y,a,,,,Entity Reference Revisions (paragraphs),,n,*,Layout Paragraphs,n,"Preview mode is preview. 0 nesting level. All parent paragraphs allowed except contact, hours, events list, fact lists, stories list, profiles list, social media, quote, hallmark, hero, content carousel.",A CTA should be added as the first flex item.,college
+,College (Content type),Facts List,field_facts_list,y,a,,,,Entity Reference Revisions (paragraphs),Facts List (Paragraph type),y,1,Paragraphs Stable,n,"Closed, Preview, No Autocollapse, Buttons, Default form display, No default paragraph, Only collapse/edit all enabled. Only facts allowed.",,college
+,College (Content type),Stories & Video List,field_stories_video_list,n,a,,,,Entity Reference Revisions (paragraphs),Facts List (Paragraph type),y,1,Paragraphs Stable,n,"Closed, Preview, No Autocollapse, Buttons, Default form display, No default paragraph, Only collapse/edit all enabled. Only facts allowed.",,college
+,College (Content type),Contact,field_contact,y,a,,,,Entity reference,Contact Library (Content type),n,1,Autocomplete,n,Rendered as teaser,,college
+,College (Content type),Hours,field_hours_library,y,a,,,,Entity reference,Hours Library (Content type),n,1,Autocomplete,n,Rendered as teaser,,college
+,College (Content type),Social Links,field_platforms,y,a,,,,Link,,y,*,Link,n,"External only, text disable. Gets appended to the contact/hours block if it appears on the college has contact/hours.","Paste in the links to your platform pages. <strong>WARNING:</strong> Only Facebook, Twitter, LinkedIn, Instagram, Snapchat, TikTok and YouTube are supported. ",college
+,College (Content type),Editorial Access,field_editorial_access,y,a,x,,,Entity reference,Editorial Access (Vocabulary),y,*,Check boxes/radio buttons,n,,,college
+,College (Content type),Domain Source,field_domain_source,y,a,x,,,Entity reference,,y,1,Select list,n,,,college
+,College (Content type),Domain Record,field_domain_record,y,a,x,,,Entity reference,,y,1,Check boxes/radio buttons,n,,,college
+,College (Content type),Send to all affiliates,field_domain_all_affiliates,y,a,x,,,Boolean,,n,1,Single on/off checkbox,n,,,college
+,College (Content type),Metatags,field_metatags,y,a,,,,Meta tags,,n,1,Advanced meta tags form,n,,,college
+,,,,,,,,,,,,,,,,,#VALUE!
+,Contact Library (Content type),Title,-,-,a,,,,Entity label,,-,-,Textfield,n,,,contact
+,Contact Library (Content type),College,field_college,y,d,,,,Entity reference,College (Content type),n,1,Autocomplete,n,,,contact
+,Contact Library (Content type),Department,field_department,y,d,,,,Entity reference,Department (Content type),n,1,Autocomplete,n,,,contact
+,Contact Library (Content type),Body,field_body,y,d,,,,"Text (formatted, long, with summary)",,n,1,Text area with a summary,n,"Limited HTML allowed, no summary",,contact
+,Contact Library (Content type),Placement tags,field_placement_tags,y,d,,,,Entity reference,Placement Tags (Vocabulary),n,*,Autocomplete,n,,,contact
+,Contact Library (Content type),Page families,field_page_families,y,d,,,,Entity reference,Page Families (Vocabulary),n,*,Autocomplete,n,,,contact
+,Contact Library (Content type),Email,field_email,y,a,,,,Email,,y,1,Email,n,,,contact
+,Contact Library (Content type),Phone,field_phone,y,a,,,,Telephone number,,n,1,Telephone number,n,,,contact
+,Contact Library (Content type),Fax,field_fax,n,d,,,,Telephone number,,n,1,Telephone number,n,,,contact
+,Contact Library (Content type),Location,field_address,y,a,,,,Address,,y,1,Address field,n,Relabel organization to location,,contact
+,Contact Library (Content type),Editorial Access,field_editorial_access,y,a,x,,,Entity reference,Editorial Access (Vocabulary),y,*,Check boxes/radio buttons,n,,,contact
+,Contact Library (Content type),Domain Source,field_domain_source,y,a,x,,,Entity reference,,y,1,Select list,n,,,contact
+,Contact Library (Content type),Domain Record,field_domain_record,y,a,x,,,Entity reference,,y,1,Check boxes/radio buttons,n,,,contact
+,Contact Library (Content type),Send to all affiliates,field_domain_all_affiliates,y,a,x,,,Boolean,,n,1,Single on/off checkbox,n,,,contact
+,,,,,,,,,,,,,,,,,#VALUE!
+,Department (Content type),Title,-,-,a,,,,Entity label,,-,-,Textfield,n,,,department
+,Department (Content type),Subtitle,field_subtitle,y,a,,,,Text (plain),,y,1,Textfield,n,Render as H2,,department
+,Department (Content type),Meta Description,field_meta_description,y,a,,,,"Text (plain, long)",,y,1,Text area (multiple rows),n,"Set as metatag abstract, not shown on node",,department
+,Department (Content type),Intro text,field_intro_text,y,a,,,,"Text (formatted, long, with summary)",,y,1,Text area (multiple rows),n,Limited HTML allowed. Use custom metatag setup to include intro instead of body.,,department
+,Department (Content type),College,field_college,y,a,,,,Entity reference,College (Content type),y,1,Select list,n,,,department
+,Department (Content type),Links,field_links,y,a,,,,Link,,y,6,Link,n,"Internal & External, Link text required",,department
+,Department (Content type),Majors and Minors Description,body,y,a,,,,"Text (formatted, long, with summary)",,n,1,Text area with a summary,n,"Limited HTML allowed, no summary",Always start with an H2 headline.,department
+,Department (Content type),Faculty Link,field_faculty_link,y,a,,,,Link,,n,1,Link,n,"Internal links only, no link text.",,department
+,Department (Content type),Hallmarks,field_hallmarks,y,a,,,,Entity Reference Revisions (paragraphs),Hallmark (Paragraph type),y,*,Paragraphs Stable,n,"Closed, Preview, No Autocollapse, Buttons, Default form display, No default paragraph, Only collapse/edit all enabled. Only hallmarks allowed",,department
+,Department (Content type),Facts List,field_facts_list,y,a,,,,Entity Reference Revisions (paragraphs),Facts List (Paragraph type),y,1,Paragraphs Stable,n,"Closed, Preview, No Autocollapse, Buttons, Default form display, No default paragraph, Only collapse/edit all enabled. Only facts allowed.",,department
+,Department (Content type),Student Opportunities,field_opportunities,n,a,,,,Entity Reference Revisions (paragraphs),Accordions (Paragraph type),y,1,Paragraphs Stable,n,"Closed, Preview, No Autocollapse, Buttons, Default form display, No default paragraph, Only collapse/edit all enabled. On accordion group allowed",Add 2 to 6 opportunities.,department
+,Department (Content type),Content Carousel,field_content_carousel,y,a,,,,Entity Reference Revisions (paragraphs),,y,5,Paragraphs Stable,n,"Closed, Preview, No Autocollapse, Buttons, Default form display, No default paragraph, Only collapse/edit all enabled. Only content carousel allowed.",,department
+,Department (Content type),Flex Content,field_paragraphs,y,a,,,,Entity Reference Revisions (paragraphs),,n,*,Layout Paragraphs,n,"Preview mode is preview. 0 nesting level. All parent paragraphs allowed except contact, hours, events list, fact lists, stories list, profiles list, social media, quote, hallmark, hero, content carousel.",,department
+,Department (Content type),Contact,field_contact,y,a,,,,Entity reference,Contact Library (Content type),n,1,Autocomplete,n,Rendered as teaser,,department
+,Department (Content type),Hours,field_hours_library,y,a,,,,Entity reference,Hours Library (Content type),n,1,Autocomplete,n,Rendered as teaser,,department
+,Department (Content type),Social Links,field_platforms,y,a,,,,Link,,y,*,Link,n,"External only, text disable. Appended to contact/hours if the department has content/hours.","Paste in the links to your platform pages. <strong>WARNING:</strong> Only Facebook, Twitter, LinkedIn, Instagram, Snapchat, TikTok and YouTube are supported. ",department
+,Department (Content type),What's Next,field_whats_next,n,a,,,,Entity reference,Reusable Widgets (Custom block type),y,1,Select list,n,,,department
+,Department (Content type),Placement tag,field_placement_tag,y,d,,,,Entity reference,Placement Tags (Vocabulary),y,1,Autocomplete,n,,,department
+,Department (Content type),Editorial Access,field_editorial_access,y,a,x,,,Entity reference,Editorial Access (Vocabulary),y,*,Check boxes/radio buttons,n,,,department
+,Department (Content type),Domain Source,field_domain_source,y,a,x,,,Entity reference,,y,1,Select list,n,,,department
+,Department (Content type),Domain Record,field_domain_record,y,a,x,,,Entity reference,,y,1,Check boxes/radio buttons,n,,,department
+,Department (Content type),Send to all affiliates,field_domain_all_affiliates,y,a,x,,,Boolean,,n,1,Single on/off checkbox,n,,,department
+,Department (Content type),Metatags,field_metatags,y,a,,,,Meta tags,,n,1,Advanced meta tags form,n,,,department
+,,,,,,,,,,,,,,,,,#VALUE!
+,Event (Content type),Title,-,-,d,,,,Entity label,,-,-,Textfield,n,,,event
+,Event (Content type),Event Image,field_image,y,d,,,,Entity reference,Image (Media type),n,1,Media library,n,,<strong>Optimal image size:</strong> 720x720px,event
+,Event (Content type),Dates,field_dates,n,d,,,,Smart date range,,y,*,Smart Date and time range,n,Allows recurring,"Add a single date, multiple dates, or add a recurring date.",event
+,Event (Content type),Category,field_category,y,d,,,,Entity reference,Events Categories (Vocabulary),n,*,Select list,n,,,event
+,Event (Content type),Location,field_event_location,n,d,,,Location (details),Geolocation,,n,1,Geolocation Google Maps API,n,"Geocoder, Locate, MapType, Recenter, Zoom enabled. Marker info window enabled, Road Map Type, Zoom 10, height 400px, width 100%. Address info is shown on pin.",Use the autocomplete search function the map to select an address or well-know place. The location will automatically be added in the address field below (it may take a second or two to appear).,event
+,Event (Content type),Address,field_address,n,d,,,Location (details),Address,,y,1,Address field,n,Should autopopulate from geolocation field same as map widget,,event
+,Event (Content type),Body,body,y,d,,,,"Text (formatted, long, with summary)",,n,1,Text area with a summary,n,Basic HTML allowed,,event
+,Event (Content type),List Widget,field_list_widget,y,d,,,,Entity reference,List Widgets (Vocabulary),y,1,Select list,n,Event term selected by default. Field hidden from node form.,,event
+,Event (Content type),Editorial Access,field_editorial_access,y,d,x,,,Entity reference,Editorial Access (Vocabulary),y,*,Select list,n,,,event
+,Event (Content type),Domain Source,field_domain_source,y,d,x,,,Entity reference,,y,1,Select list,n,,,event
+,Event (Content type),Domain Record,field_domain_record,y,d,x,,,Entity reference,,y,1,Check boxes/radio buttons,n,,,event
+,Event (Content type),Send to all affiliates,field_domain_all_affiliates,y,d,x,,,Boolean,,n,1,Single on/off checkbox,n,,,event
+,Event (Content type),Metatags,field_metatags,y,d,,,,Meta tags,,n,1,Advanced meta tags form,n,,,event
+,,,,,,,,,,,,,,,,,#VALUE!
+,Fact Library (Content type),Title,-,-,a,,,,Entity label,,-,-,Textfield,n,,This is the fact headline.,fact
+,Fact Library (Content type),Text,field_plain_text,n,a,,,,"Text (plain, long)",,y,1,Text area (multiple rows),n,,,fact
+,Fact Library (Content type),Source,field_source,n,a,,,,Text (plain),,n,1,Textfield,n,,,fact
+,Fact Library (Content type),Link to Source,field_source_link,n,a,,,,Link,,n,1,Link,n,"External only, text optional. ",,fact
+,Fact Library (Content type),Expiration date,field_date,y,a,,,,Date,,y,1,Date and time,n,Date only. Possibly use scheduled unpublishing for this.,,fact
+,Fact Library (Content type),Colleges,field_colleges,y,a,,,,Entity reference,College (Content type),n,*,Autocomplete,n,,,fact
+,Fact Library (Content type),Departments,field_departments,y,a,,,,Entity reference,Department (Content type),n,*,Autocomplete,n,,,fact
+,Fact Library (Content type),Programs,field_programs,y,a,,,,Entity reference,Academic Program (Content type),n,*,Autocomplete,n,,,fact
+,Fact Library (Content type),Placement tags,field_placement_tags,y,a,,,,Entity reference,Placement Tags (Vocabulary),n,*,Autocomplete,n,,,fact
+,Fact Library (Content type),Page families,field_page_families,y,a,,,,Entity reference,Page Families (Vocabulary),n,*,Autocomplete,n,,,fact
+,Fact Library (Content type),Eyebrow,field_eyebrow,y,d,,,,Entity reference,Eyebrows (Vocabulary),y,1,Select list,n,,,fact
+,Fact Library (Content type),List Widget,field_list_widget,y,a,,,,Entity reference,List Widgets (Vocabulary),y,1,Select list,n,Hours term selected by default. Field hidden from node form.,,fact
+,Fact Library (Content type),Editorial Access,field_editorial_access,y,a,x,,,Entity reference,Editorial Access (Vocabulary),y,*,Check boxes/radio buttons,n,,,fact
+,Fact Library (Content type),Domain Source,field_domain_source,y,a,x,,,Entity reference,,y,1,Select list,n,,,fact
+,Fact Library (Content type),Domain Record,field_domain_record,y,a,x,,,Entity reference,,y,1,Check boxes/radio buttons,n,,,fact
+,Fact Library (Content type),Send to all affiliates,field_domain_all_affiliates,y,a,x,,,Boolean,,n,1,Single on/off checkbox,n,,,fact
+,,,,,,,,,,,,,,,,,#VALUE!
+,General Pages (Content type),Title,-,-,a,,,Header (open by default),Entity label,,-,-,Textfield,n,,,page
+,General Pages (Content type),Title,Formatted Title,-,a,,,,Text (plain),,y,1,Textfield,n,Use autoentity to replace node title.,,page
+,General Pages (Content type),Meta Description,field_meta_description,y,a,,,,"Text (formatted, long)",,y,1,Text area (multiple rows),n,"Set as metatag abstract, not shown on node",,page
+,General Pages (Content type),Banner,field_image,y,d,,,,Entity reference,Image (Media type),n,1,Media library,n,,,page
+,General Pages (Content type),Subtitle,field_subtitle,n,a,,,Header (open by default),Text (plain),,n,1,Textfield,n,Rendered as H2,,page
+,General Pages (Content type),Into,body,y,a,,,Header (open by default),"Text (formatted, long, with summary)",,n,1,Text area with a summary,n,Limited HTML allowed,,page
+,General Pages (Content type),Hero,field_hero,n,a,,,Header (open by default),Entity Reference Revisions (paragraphs),,n,1,Paragraphs Stable,n,"Closed, Preview, No Autocollapse, Buttons, Default form display, NO default paragraph, Only collapse/edit all enabled. Only hero allowed.",,page
+,General Pages (Content type),Sections,field_paragraphs,y,a,,,,Entity Reference Revisions (paragraphs),,n,*,Layout Paragraphs,n,"Preview mode is preview. All parent paragraphs enabled except quote, hallmark, content carousel, hero, hours set. 0 nesting level.",,page
+,General Pages (Content type),Page family,field_page_family,y,a,,,,Entity reference,Page Families (Vocabulary),y,1,Autocomplete,n,,,page
+,General Pages (Content type),Exclude from search,exclude_search,y,a,,,,Boolean,,n,1,Single on/off checkbox,n,"Changes the metatags for the page to be nofollow, noindex.",,page
+,General Pages (Content type),Hide sidebar nav & breadcrumbs,hide_nav,y,a,,,,Boolean,,n,1,Single on/off checkbox,n,Disabled rendering of sidebar nav block (via twig template),,page
+,General Pages (Content type),Editorial Access,field_editorial_access,y,a,x,,,Entity reference,Editorial Access (Vocabulary),y,*,Check boxes/radio buttons,n,,,page
+,General Pages (Content type),Domain Source,field_domain_source,y,a,x,,,Entity reference,,y,1,Select list,n,,,page
+,General Pages (Content type),Domain Record,field_domain_record,y,a,x,,,Entity reference,,y,1,Check boxes/radio buttons,n,,,page
+,General Pages (Content type),Send to all affiliates,field_domain_all_affiliates,y,a,x,,,Boolean,,n,1,Single on/off checkbox,n,,,page
+,General Pages (Content type),Social Share Image,field_social_image,y,a,,,,Entity reference,Image (Media type),n,1,Media library,n,Update metatags to use this image. Put in sidebar tab next to metatags. Do not render on node,<strong>Optimal image size:</strong> 1200x628px,page
+,General Pages (Content type),Metatags,field_metatags,y,a,,,,Meta tags,,n,1,Advanced meta tags form,n,Only editable by site admins if possible.,,page
+,,,,,,,,,,,,,,,,,#VALUE!
+,Hours Library (Content type),Title,-,-,a,,,,Entity label,,-,-,Textfield,n,,,hours
+,Hours Library (Content type),College,field_college,y,d,,,,Entity reference,College (Content type),n,1,Autocomplete,n,,,hours
+,Hours Library (Content type),Department,field_department,y,d,,,,Entity reference,Department (Content type),n,1,Autocomplete,n,,,hours
+,Hours Library (Content type),Placement tags,field_placement_tags,y,d,,,,Entity reference,Placement Tags (Vocabulary),n,*,Autocomplete,n,,Make sure you are only tagging one node with each placement tag.,hours
+,Hours Library (Content type),Page families,field_page_families,y,d,,,,Entity reference,Page Families (Vocabulary),n,*,Autocomplete,n,,Make sure you are only tagging one node with each family tag.,hours
+,Hours Library (Content type),Building Info,field_building,y,a,,,,Text (plain),,y,1,Text area with a summary,n,,,hours
+,Hours Library (Content type),Hours,field_hours,n,a,,,,Entity reference,Hours Set (Paragraph type),y,*,Paragraphs Stable,n,"Closed, Preview, No Autocollapse, Buttons, Default form display, Hours Set default paragraph, Only collapse/edit all enabled.",,hours
+,Hours Library (Content type),Editorial Access,field_editorial_access,y,a,x,,,Entity reference,Editorial Access (Vocabulary),y,*,Check boxes/radio buttons,n,,,hours
+,Hours Library (Content type),Domain Source,field_domain_source,y,a,x,,,Entity reference,,y,1,Select list,n,,,hours
+,Hours Library (Content type),Domain Record,field_domain_record,y,a,x,,,Entity reference,,y,1,Check boxes/radio buttons,n,,,hours
+,Hours Library (Content type),Send to all affiliates,field_domain_all_affiliates,y,a,x,,,Boolean,,n,1,Single on/off checkbox,n,,,hours
+,,,,,,,,,,,,,,,,,#VALUE!
+,Job (Content type),Title,-,-,a,,,,Entity label,,-,-,Textfield,n,,,job
+,Job (Content type),Meta Description,field_meta_description,y,a,,,,"Text (plain, long)",,y,1,Text area (multiple rows),n,"Set as metatag abstract, not shown on node",,job
+,Job (Content type),Job ID,field_job_id,n,a,,,,Text (plain),,y,1,Textfield,n,,,job
+,Job (Content type),Date Posted,field_date_posted,n,a,,,,Date,,y,1,Date and time,n,Date only,,job
+,Job (Content type),Apply By,field_apply_by,n,a,,,,Date,,y,1,Date and time,n,Date only. Need disclaimer text added on front side: https://www.uwec.edu/job-postings/19938/,,job
+,Job (Content type),FT/PT,field_ft_pt,n,a,,,,List (text),,y,1,Check boxes/radio buttons,n,,,job
+,Job (Content type),Campus,field_campus,n,a,,,,Entity reference,Campuses (Vocabulary),y,1,Select list,n,,,job
+,Job (Content type),Department,field_department,n,a,,,,Entity reference,Department (Content type),n,1,Autocomplete,n,,,job
+,Job (Content type),Position Type,field_position_type,n,a,,,,List (text),,n,1,Select list,n,,,job
+,Job (Content type),Interest Area,field_interest_area,n,a,,,,Entity reference,Interest Types (Vocabulary),n,1,Select list,n,,,job
+,Job (Content type),Position,body,y,a,,,,"Text (formatted, long, with summary)",,n,1,Textfield,n,Limited HTML Allowed,A brief overall description of the position.,job
+,Job (Content type),Additional Information,field_additional_info,y,a,,,,"Text (formatted, long)",,n,1,Text area (multiple rows),n,Limited HTML Allowed,,job
+,Job (Content type),Editorial Access,field_editorial_access,y,a,x,,,Entity reference,Editorial Access (Vocabulary),y,*,Check boxes/radio buttons,n,,,job
+,Job (Content type),Domain Source,field_domain_source,y,a,x,,,Entity reference,,y,1,Select list,n,,,job
+,Job (Content type),Domain Record,field_domain_record,y,a,x,,,Entity reference,,y,1,Check boxes/radio buttons,n,,,job
+,Job (Content type),Send to all affiliates,field_domain_all_affiliates,y,a,x,,,Boolean,,n,1,Single on/off checkbox,n,,,job
+,Job (Content type),Metatags,field_metatags,y,a,,,,Meta tags,,n,1,Advanced meta tags form,n,,,job
+,,,,,,,,,,,,,,,,,#VALUE!
+,Landing page (Content type),Title,-,-,d,,,,Entity label,,-,-,Textfield,n,,,landing_page
+,Landing Page (Content type),Hero,field_hero,y,d,,,,Entity reference,,n,1,,n,Hero will either be a paragraph or maybe fields dependent on the page type (shown/hidden with conditional fields??,,landing_page
+,Landing page (Content type),Body,body,y,d,,,,"Text (formatted, long, with summary)",,n,1,Text area with a summary,n,Basic HTML allowed,,landing_page
+,Landing Page (Content type),Sections,field_paragraphs,y,d,,,,Entity Reference Revisions (paragraphs),All,n,*,Layout Paragraphs,n,Preview view mode is preview. All paragraphs enabled. Nesting level is 0. Require paragraphs to be added in a layout.,,landing_page
+,Landing Page (Content type),Page family,field_page_family,y,d,,,,Entity reference,Page Families (Vocabulary),y,1,Autocomplete,n,,,landing_page
+,Landing Page (Content type),Exclude from search,exclude_search,y,d,,,,Boolean,,n,1,Single on/off checkbox,n,"Changes the metatags for the page to be nofollow, noindex.",,landing_page
+,Landing Page (Content type),Editorial Access,field_editorial_access,y,d,x,,,Entity reference,Editorial Access (Vocabulary),y,*,Check boxes/radio buttons,n,,,landing_page
+,Landing Page (Content type),Domain Source,field_domain_source,y,d,x,,,Entity reference,,y,1,Select list,n,,,landing_page
+,Landing Page (Content type),Domain Record,field_domain_record,y,d,x,,,Entity reference,,y,1,Check boxes/radio buttons,n,,,landing_page
+,Landing Page (Content type),Send to all affiliates,field_domain_all_affiliates,y,d,x,,,Boolean,,n,1,Single on/off checkbox,n,,,landing_page
+,Landing Page (Content type),Metatags,field_metatags,y,d,,,,Meta tags,,n,1,Advanced meta tags form,n,,,landing_page
+,,,,,,,,,,,,,,,,,#VALUE!
+,Profile (Content type),Title,-,-,a,,,,Entity label,,-,-,Textfield,n,,,bio
+,Profile (Content type),Athena ID,field_athena_id,n,a,,,,Text (plain),,y,1,Textfield,n,Hidden on form display (after sync is set up),,bio
+,Profile (Content type),Username,field_username,n,a,,,,Text (plain),,y,1,Textfield,n,"Hidden on form display (after sync is set up), maps to Drupal username, used in URL slug.",,bio
+,Profile (Content type),Headshot,field_image,y,a,,,,Entity reference,Image (Media type),y,1,Media library,n,,"<strong>Optimal image size:</strong> 852x1016px<br> If you need a headshot scheduled, please <a href=""mailto:photo@uwec.com"">email photo@uwec.edu</a>",bio
+,Profile (Content type),First Name,field_first_name,n,a,,,,Text (plain),,y,1,Textfield,n,Hidden on form display (after sync is set up) Pulled from HR system,,bio
+,Profile (Content type),Middle Name,field_middle_name,n,a,,,,Text (plain),,y,1,Textfield,n,Not displayed on node,,bio
+,Profile (Content type),Last Name,field_last_name,n,a,,,,Text (plain),,y,1,Textfield,n,Hidden on form display (after sync is set up) Pulled from HR system,,bio
+,Profile (Content type),First Name Override,field_first_override,n,a,,,,Text (plain),,n,1,Textfield,n,When used its shown in place of the pulled first name.,Override the first name pulled from HR.,bio
+,Profile (Content type),Last Name Override,field_last_override,n,a,,,,Text (plain),,n,1,Textfield,n,When used its shown in place of the pulled last name.,Override the last name pulled from HR.,bio
+,Profile (Content type),Prefixes,field_prefixes,n,a,,,,Text (plain),,n,1,Textfield,n,,,bio
+,Profile (Content type),Suffixes,field_suffixes,n,a,,,,Text (plain),,n,1,Textfield,n,,,bio
+,Profile (Content type),Pronouns,field_pronouns,n,a,,,,Text (plain),,n,1,Textfield,n,,"Optionally enter your pronouns here (e.g., ""she/her/hers"" or ""they/them"" or ""he or they""). If entered, your pronouns will be listed alongside your name on your profile.",bio
+,Profile (Content type),Faculty/Staff,field_faculty_staff,n,a,,,,List (text),,n,1,Textfield,n,,"To select multiple designations, hold down the ctrl (PC) or command (mac) key and select all desired fields.",bio
+,Profile (Content type),Title(s),field_position,n,a,,,,Text (plain),,n,*,Textfield,n,Hidden on form display (after sync is set up)  Pulled from HR system,,bio
+,Profile (Content type),Title Override(s),field_position_override,n,a,,,,Text (plain),,n,*,Textfield,n,When used its shown in place of the pulled title.,Override the title pulled from HR.,bio
+,Profile (Content type),Alumni?,field_is_alumni,n,a,,,,Boolean,,n,1,Single on/off checkbox,n,,,bio
+,Profile (Content type),Emeriti Status,field_emeriti_status,n,a,,,,List (text),,n,1,Select list,n,"Options: Not Emeritus, Emeritus - Teaching, Emeritus - Active Non-Teaching, Emeritus - Inactive Non-Teaching.  Need more information from Basecamp on what other functionality the field has. If any of the three Emeritus options are selected then the word 'Emeritus' appears under the profile photo.",,bio
+,Profile (Content type),Campus,field_campus,n,a,,,,Entity reference,Campuses (Vocabulary),y,1,Select list,n,,"To select multiple campuses, hold down the ctrl (PC) or command (mac) key and select all desired fields. ",bio
+,Profile (Content type),Colleges,field_colleges,y,a,,,,Entity reference,College (Content type),y,*,Select list,n,,,bio
+,Profile (Content type),Academic Department(s),field_departments,n,a,,,,Entity reference,Department (Content type),n,*,Autocomplete,n,,,bio
+,Profile (Content type),Academic Programs,field_programs,n,a,,,,Entity reference,Academic Program (Content type),n,*,Autocomplete,n,,,bio
+,Profile (Content type),Email,field_email,y,a,,,,Email,,n,1,Email,n,Hidden on form display (after sync is set up). Pulled from HR system,,bio
+,Profile (Content type),Phone,field_phone,y,a,,,,Telephone number,,n,1,Telephone number,n,Hidden on form display (after sync is set up). Pulled from HR system,,bio
+,Profile (Content type),Office,field_office,y,a,,,,"Text (plain, long)",,n,1,Text area (multiple rows),n,,"<strong>Example:</strong></br>
+Hibbard Humanities Hall 717</br>
+124 Garfield Ave </br>
+Eau Claire, WI 54701
+",bio
+,Profile (Content type),Office Hours,field_office_hours,n,a,,,,"Text (plain, long)",,n,1,Text area (multiple rows),n,,"<strong>Example:</strong></br>
+Spring semester 2023:</br>
+Wednesdays 12:30-2:30pm</br>
+and by appointment",bio
+,Profile (Content type),CV,field_cv,y,a,,,,File,,n,1,File,n,Allowed file types: pdf," If you would rather link to your CV, you may add the link below. ",bio
+,Profile (Content type),Links,field_links,n,a,,,,Link,,n,6,Link,n,"Internal and external, text required. Not show on mockups but listed under the cv field with the info icon.",,bio
+,Profile (Content type),Social Media,field_platforms,n,a,,,,Link,,n,*,Link,n,"External only, text disable","Paste in the links to your social pages. WARNING: Only Facebook, Twitter, LinkedIn, Instagram, Snapchat, Flickr, Blogger, Pinterest, Tumblr, and YouTube are supported. ",bio
+,Profile (Content type),Short Bio,field_short_bio,n,a,,,,"Text (formatted, long, with summary)",,n,1,Text area (multiple rows),n,"Limited HTML allowed, used for metatags only","Short bios ONLY appear when you are featured on a department, office, or service employee listing. This should be a quick summary of your role. Please keep text between 1-3 sentences. ",bio
+,Profile (Content type),Full Bio,body,y,a,,,,"Text (formatted, long, with summary)",,n,1,Text area with a summary,n,"Limited HTML allowed, no summary",Full bios ONLY appear on your full profile listing. This is used to display more robust information about you and your role. This field can be as long or as short as you'd like. ,bio
+,Profile (Content type),Areas of Expertise,field_areas_of_expertise,,d,,,,,,,,Select list,n,No doing the data integration or having the field at all.,,bio
+,Profile (Content type),Teaching & Research Interests,field_interests,n,a,,,Additional Information,"Text (formatted, long)",,n,1,Text area (multiple rows),n,Limited HTML allowed,,bio
+,Profile (Content type),Research And Creative Activities,field_research,n,d,,,Additional Information,"Text (formatted, long)",,n,1,Text area (multiple rows),n,Limited HTML allowed,,bio
+,Profile (Content type),Education,field_education,n,a,,,Additional Information,"Text (formatted, long)",,n,1,Text area (multiple rows),n,Limited HTML allowed,,bio
+,Profile (Content type),Honors And Recognition,field_honors,n,a,,,Additional Information,"Text (formatted, long)",,n,1,Text area (multiple rows),n,Limited HTML allowed,,bio
+,Profile (Content type),Published Research,field_publications,n,a,,,Additional Information,"Text (formatted, long)",,n,1,Text area (multiple rows),n,Limited HTML allowed,,bio
+,Profile (Content type),Placement tags,field_placement_tags,y,d,,,,Entity reference,Placement Tags (Vocabulary),n,*,Autocomplete,n,,,bio
+,Profile (Content type),Page families,field_page_families,y,a,,,,Entity reference,Page Families (Vocabulary),n,*,Autocomplete,n,,"Please select any office or service that you should appear on a staff listing of (e.g., Blugold Central, Learning Technology Services, Center for Excellence in Teaching and Learning, Campus Closet, etc.) ",bio
+,Profile (Content type),List Widget,field_list_widget,y,a,,,,Entity reference,List Widgets (Vocabulary),y,1,Select list,n,Profile term selected by default. Field hidden from node form.,,bio
+,Profile (Content type),Last Import Date,field_import_date,y,a,,,,Date,,y,1,Date and time,n,"Date and time, HR SYNC, Visible on node form but prevent all except site admins from accessing",,bio
+,Profile (Content type),Editorial Access,field_editorial_access,y,d,x,,,Entity reference,Editorial Access (Vocabulary),y,*,Check boxes/radio buttons,n,,,bio
+,Profile (Content type),Domain Source,field_domain_source,y,a,x,,,Entity reference,,y,1,Select list,n,,,bio
+,Profile (Content type),Domain Record,field_domain_record,y,a,x,,,Entity reference,,y,1,Check boxes/radio buttons,n,,,bio
+,Profile (Content type),Send to all affiliates,field_domain_all_affiliates,y,a,x,,,Boolean,,n,1,Single on/off checkbox,n,,,bio
+,Profile (Content type),Metatags,field_metatags,y,a,,,,Meta tags,,n,1,Advanced meta tags form,n,,,bio
+,,,,,,,,,,,,,,,,,#VALUE!
+,Snapshot Library (Content type),Title,-,-,a,,,,Entity label,,-,-,Textfield,n,,This is the fact headline.,snapshot
+,Snapshot Library (Content type),Snapshot,field_image,y,a,,,,Entity reference,Image (Media type),y,1,Media library,n,"Render as 492x492 on the node, 240x240 on teaser",<strong>Optimal image size:</strong> 984x984px,snapshot
+,Snapshot Library (Content type),Text,field_plain_text,n,a,,,,"Text (plain, long)",,y,1,Text area (multiple rows),n,,,snapshot
+,Snapshot Library (Content type),Link,field_link,y,a,,,,Link,,y,1,Link,n,,,snapshot
+,Snapshot Library (Content type),Eyebrow,field_eyebrow,y,a,,,,Entity reference,Eyebrows (Vocabulary),y,1,Select list,n,,,snapshot
+,Snapshot Library (Content type),Entry Year,field_entry_year,n,a,,,,Date,,y,1,Date and time,n,Date (year) only,,snapshot
+,Snapshot Library (Content type),Type,field_snapshot_type,n,a,,,,Entity reference,Snapshot Types (Vocabulary),y,1,1,n,,,snapshot
+,Snapshot Library (Content type),Colleges,field_colleges,y,a,,,,Entity reference,College (Content type),n,*,Autocomplete,n,,,snapshot
+,Snapshot Library (Content type),Departments,field_departments,y,a,,,,Entity reference,Department (Content type),n,*,Autocomplete,n,,,snapshot
+,Snapshot Library (Content type),Programs,field_programs,y,a,,,,Entity reference,Academic Program (Content type),n,*,Autocomplete,n,,,snapshot
+,Snapshot Library (Content type),Placement tags,field_placement_tags,y,a,,,,Entity reference,Placement Tags (Vocabulary),n,*,Autocomplete,n,,,snapshot
+,Snapshot Library (Content type),Page families,field_page_families,y,a,,,,Entity reference,Page Families (Vocabulary),n,*,Autocomplete,n,,,snapshot
+,Snapshot Library (Content type),List Widget,field_list_widget,y,a,,,,Entity reference,List Widgets (Vocabulary),y,1,Select list,n,Snapshot term selected by default. Field hidden from node form.,,snapshot
+,Snapshot Library (Content type),Editorial Access,field_editorial_access,y,a,x,,,Entity reference,Editorial Access (Vocabulary),y,*,Check boxes/radio buttons,n,,,snapshot
+,Snapshot Library (Content type),Domain Source,field_domain_source,y,a,x,,,Entity reference,,y,1,Select list,n,,,snapshot
+,Snapshot Library (Content type),Domain Record,field_domain_record,y,a,x,,,Entity reference,,y,1,Check boxes/radio buttons,n,,,snapshot
+,Snapshot Library (Content type),Send to all affiliates,field_domain_all_affiliates,y,a,x,,,Boolean,,n,1,Single on/off checkbox,n,Checked by default,,snapshot
+,,,,,,,,,,,,,,,,,#VALUE!
+,Story Library (Content type),Title,-,-,a,,,,Entity label,,-,-,Textfield,n,,,news
+,Story Library (Content type),Featured Image,field_image,y,a,,,,Entity reference,Image (Media type),y,1,Media library,n,"Render as banner on node, 539x304 on teaser",<strong>Optimal image size:</strong> 1920x1280px,news
+,Story Library (Content type),Authors,field_authors,n,a,,,,Entity reference,Author (Vocabulary),n,*,Autocomplete,n,"If the author's term has a profile referenced, then link directly to the profile.",,news
+,Story Library (Content type),Story Type,field_story_type,n,a,,,,Entity reference,Story Types (Vocabulary),y,1,Select list,n,,,news
+,Story Library (Content type),Eyebrow,field_eyebrow,y,a,,,,Entity reference,Eyebrows (Vocabulary),y,1,Select list,n,,,news
+,Story Library (Content type),Intro text,field_intro_text,y,a,,,,"Text (formatted, long, with summary)",,y,1,Text area (multiple rows),n,Limited HTML allowed. Use custom metatag setup to include intro instead of body.,,news
+,Story Library (Content type),Story,body,y,d,,,,"Text (formatted, long, with summary)",,n,1,Textfield,n,"Basic HTML, no summary",,news
+,Story Library (Content type),Sections,field_paragraphs,y,a,,,,Entity Reference Revisions (paragraphs),,n,*,Layout Paragraphs,n,Preview mode is preview. All content paragraphs enabled single. 0 nesting level.,,news
+,Story Library (Content type),Categories,field_categories,y,d,,,,Entity reference,Story Categories (Vocabulary),y,*,Autocomplete,n,,,news
+,Story Library (Content type),Colleges,field_colleges,y,a,,,,Entity reference,College (Content type),n,*,Autocomplete,n,,,news
+,Story Library (Content type),Departments,field_departments,y,a,,,,Entity reference,Department (Content type),n,*,Autocomplete,n,,,news
+,Story Library (Content type),Programs,field_programs,y,a,,,,Entity reference,Academic Program (Content type),n,*,Autocomplete,n,,,news
+,Story Library (Content type),Placement tags,field_placement_tags,y,a,,,,Entity reference,Placement Tags (Vocabulary),n,*,Autocomplete,n,,,news
+,Story Library (Content type),Page families,field_page_families,y,a,,,,Entity reference,Page Families (Vocabulary),n,*,Autocomplete,n,,,news
+,Story Library (Content type),List Widget,field_list_widget,y,a,,,,Entity reference,List Widgets (Vocabulary),y,1,Select list,n,Story term selected by default. Field hidden from node form.,,news
+,Story Library (Content type),Editorial Access,field_editorial_access,y,a,x,,,Entity reference,Editorial Access (Vocabulary),y,*,Check boxes/radio buttons,n,,,news
+,Story Library (Content type),Domain Source,field_domain_source,y,a,x,,,Entity reference,,y,1,Select list,n,,,news
+,Story Library (Content type),Domain Record,field_domain_record,y,a,x,,,Entity reference,,y,1,Check boxes/radio buttons,n,,,news
+,Story Library (Content type),Send to all affiliates,field_domain_all_affiliates,y,a,x,,,Boolean,,n,1,Single on/off checkbox,n,,,news
+,Story Library (Content type),Metatags,field_metatags,y,a,,,,Meta tags,,n,1,Advanced meta tags form,n,,,news
+,,,,,,,,,,,,,,,,,#VALUE!
+,Support Book (Content type),Title,-,-,x,,,,Entity label,,-,-,Textfield,n,,,office
+,Support Book (Content type),Body,body,y,x,,,,"Text (formatted, long, with summary)",,n,1,Text area with a summary,n,,,office
+,Support Book (Content type),Sections,field_paragraphs,y,x,,,,Entity Reference Revisions (paragraphs),All except layout sections,n,*,Layout Paragraphs,n,Preview mode is preview. All paragraphs enabled except for layout section. 0 nesting level. ,,office
+,Support Book (Content type),Editorial Access,field_editorial_access,y,a,x,,,Entity reference,Editorial Access (Vocabulary),y,*,Check boxes/radio buttons,n,,,office
+,Support Book (Content type),Domain Source,field_domain_source,y,a,x,,,Entity reference,,y,1,Select list,n,,,office
+,Support Book (Content type),Domain Record,field_domain_record,y,a,x,,,Entity reference,,y,1,Check boxes/radio buttons,n,,,office
+,Support Book (Content type),Send to all affiliates,field_domain_all_affiliates,y,a,x,,,Boolean,,n,1,Single on/off checkbox,n,Checked by default,,office
+,,,,,,,,,,,,,,,,,#VALUE!
+,Testimonial Library (Content type),Title,-,-,a,,,,Entity label,,-,-,Textfield,n,,This is the persons name.,testimonial
+,Testimonial Library (Content type),Image,field_image,y,a,,,,Entity reference,Image (Media type),n,1,Media library,n,Render as 240x240 in all places used,<strong>Optimal image size:</strong> 480x480px,testimonial
+,Testimonial Library (Content type),Quote or Summary,body,-,a,,,,"Text (formatted, long, with summary)",,y,1,Text area with a summary,n,"Plain text, no summary","If adding a quote, do not add quotation marks.",testimonial
+,Testimonial Library (Content type),Is Quote,field_is_quote,n,d,,,,Boolean,,n,1,Single on/off checkbox,n,,Will style quote/summary text as a quote.,testimonial
+,Testimonial Library (Content type),Add date,field_date,y,a,,,,Date,,y,1,Date and time,n,Date only,Select the date this testimonal was added (considered live). ,testimonial
+,Testimonial Library (Content type),Grad Year,field_grad_year,n,a,,,,Text (plain),,n,1,Textfield,n,,Format should be 'Class of XX'.,testimonial
+,Testimonial Library (Content type),Major,field_major,n,a,,,,Text (plain),,n,1,Textfield,n,,,testimonial
+,Testimonial Library (Content type),Position,field_position,y,a,,,,Text (plain),,n,*,Textfield,n,,,testimonial
+,Testimonial Library (Content type),Eyebrow,field_eyebrow,y,a,,,,Entity reference,Eyebrows (Vocabulary),y,1,Select list,n,,,testimonial
+,Testimonial Library (Content type),Colleges,field_colleges,y,a,,,,Entity reference,College (Content type),n,*,Autocomplete,n,,,testimonial
+,Testimonial Library (Content type),Departments,field_departments,y,a,,,,Entity reference,Department (Content type),n,*,Autocomplete,n,,,testimonial
+,Testimonial Library (Content type),Programs,field_programs,y,a,,,,Entity reference,Academic Program (Content type),n,*,Autocomplete,n,,,testimonial
+,Testimonial Library (Content type),Placement tags,field_placement_tags,y,a,,,,Entity reference,Placement Tags (Vocabulary),n,*,Autocomplete,n,,,testimonial
+,Testimonial Library (Content type),Page families,field_page_families,y,a,,,,Entity reference,Page Families (Vocabulary),n,*,Autocomplete,n,,,testimonial
+,Testimonial Library (Content type),List Widget,field_list_widget,y,a,,,,Entity reference,List Widgets (Vocabulary),y,1,Select list,n,Testimonials term selected by default. Field hidden from node form.,,testimonial
+,Testimonial Library (Content type),Editorial Access,field_editorial_access,y,a,x,,,Entity reference,Editorial Access (Vocabulary),y,*,Check boxes/radio buttons,n,,,testimonial
+,Testimonial Library (Content type),Domain Source,field_domain_source,y,a,x,,,Entity reference,,y,1,Select list,n,,,testimonial
+,Testimonial Library (Content type),Domain Record,field_domain_record,y,a,x,,,Entity reference,,y,1,Check boxes/radio buttons,n,,,testimonial
+,Testimonial Library (Content type),Send to all affiliates,field_domain_all_affiliates,y,a,x,,,Boolean,,n,1,Single on/off checkbox,n,,,testimonial
+,,,,,,,,,,,,,,,,,#VALUE!
+,Video Card Library (Content type),Title,-,-,a,,,,Entity label,,-,-,Textfield,n,,This is the persons name.,video_card
+,Video Card Library (Content type),Video,field_video,n,a,,,,Entity reference,Remote Video (Media type),y,1,Media library,n,,,video_card
+,Video Card Library (Content type),Text,body,-,a,,,,"Text (formatted, long, with summary)",,y,1,Text area with a summary,n,"Limited HTML, no summary",,video_card
+,Video Card Library (Content type),Eyebrow,field_eyebrow,y,a,,,,Entity reference,Eyebrows (Vocabulary),y,1,Select list,n,,,video_card
+,Video Card Library (Content type),Colleges,field_colleges,y,a,,,,Entity reference,College (Content type),n,*,Autocomplete,n,,,video_card
+,Video Card Library (Content type),Departments,field_departments,y,a,,,,Entity reference,Department (Content type),n,*,Autocomplete,n,,,video_card
+,Video Card Library (Content type),Programs,field_programs,y,a,,,,Entity reference,Academic Program (Content type),n,*,Autocomplete,n,,,video_card
+,Video Card Library (Content type),Placement tags,field_placement_tags,y,a,,,,Entity reference,Placement Tags (Vocabulary),n,*,Autocomplete,n,,,video_card
+,Video Card Library (Content type),Page families,field_page_families,y,a,,,,Entity reference,Page Families (Vocabulary),n,*,Autocomplete,n,,,video_card
+,Video Card Library (Content type),List Widget,field_list_widget,y,a,,,,Entity reference,List Widgets (Vocabulary),y,1,Select list,n,Video Card term selected by default. Field hidden from node form.,,video_card
+,Video Card Library (Content type),Editorial Access,field_editorial_access,y,a,x,,,Entity reference,Editorial Access (Vocabulary),y,*,Check boxes/radio buttons,n,,,video_card
+,Video Card Library (Content type),Domain Source,field_domain_source,y,a,x,,,Entity reference,,y,1,Select list,n,,,video_card
+,Video Card Library (Content type),Domain Record,field_domain_record,y,a,x,,,Entity reference,,y,1,Check boxes/radio buttons,n,,,video_card
+,Video Card Library (Content type),Send to all affiliates,field_domain_all_affiliates,y,a,x,,,Boolean,,n,1,Single on/off checkbox,n,,,video_card
+,,,,,,,,,,,,,,,,,#VALUE!
+,Document (Media type),Document,field_media_file,n,x,,,,File,,y,1,File,n,"Allowed types (txt, pdf, doc, docx, zip, xls, xlsx, ppt, pptx), description enabled, max size 20mb, directory ([date:custom:Y]-[date:custom:m])",,document
+,Document (Media type),Media name,-,-,x,,,,Entity label,,-,-,Textfield,n,,,document
+,Icon (Media type),Icon,field_media_icon,n,a,,,,Image,,y,1,Image,n,"Allowed types (svg), alt enabled and required, max size 2mb, directory ([date:custom:Y]-[date:custom:m]). NOTE: WIll need to add SVG Image module",,icon
+,Icon (Media type),Media name,-,-,a,,,,Entity label,,-,-,Textfield,n,,,icon
+,Image (Media type),Image,field_media_image,n,x,,,,Image,,y,1,Image (Focal Point),n,"Allowed types (png, gif, jpg, jpeg), alt enabled and required, max size 2mb, directory ([date:custom:Y]-[date:custom:m])",,image
+,Image (Media type),Tags,field_media_tags,y,a,,,,Entity reference,Media Tags (Vocabulary),n,*,Autocomplete,n,,,image
+,Image (Media type),Image,field_caption,n,d,,,,"Text (plain, long)",,n,1,Text area (multiple rows),n,,<strong>NOTE:</strong> Captions may not be displayed in all places this media is used.,image
+,Image (Media type),Media name,-,-,x,,,,Entity label,,-,-,Textfield,n,,,image
+,Remote video (Media type),Media name,-,-,x,,,,Entity label,,-,-,Textfield,n,,,remote_video
+,Remote video (Media type),Video URL,field_media_oembed_video,n,x,,,,Text (plain),,y,1,oEmbed URL,n,,,remote_video
+,Remote Video (Media type),Tags,field_media_tags,y,a,,,,Entity reference,Media Tags (Vocabulary),n,*,Autocomplete,n,Add exposed filter to media library view for media tags.,,remote_video
+,,,,,,,,,,,,,,,,,#VALUE!
+,Basic Block (Custom block type),Block description,-,-,x,,,,Entity label,,y,1,Textfield,n,,,basic
+,Basic Block (Custom block type),Body,body,y,x,,,,"Text (formatted, long, with summary)",,n,1,Text area with a summary,n,Basic HTML allowed,,basic
+,,,,,,,,,,,,,,,,,#VALUE!
+,Formatted Promo (Custom block type),Block description,-,-,a,,,,Entity label,,y,1,Textfield,n,See if can use autoentity title so editors don't have to fill out this and formatted title.,,formatted_promo
+,Formatted Promo (Custom block type),Title,Formatted Headline,y,a,,,,"Text (formatted, long)",,n,1,Text area (multiple rows),n,Short Text Formatted HTML allowed. Add field template to render raw and strip out all tags except bold and to render in an H2. Add some admin theming so text area looks like not much content should be entered.,,formatted_promo
+,Formatted Promo (Custom block type),Body,body,y,a,,,,"Text (formatted, long, with summary)",,n,1,Text area with a summary,n,Limited HTML allowed,,formatted_promo
+,Formatted Promo (Custom block type),Button,field_link,n,a,,,,Link,,y,1,Link,n,"Internal and external links, link text required.",,formatted_promo
+,,,,,,,,,,,,,,,,,#VALUE!
+,Page Structured Section (Custom block type),Wayfinding,field_wayfinding,n,a,,,,Entity Reference Revisions (paragraphs),Wayfinding (Paragraph type),n,1,Paragraphs Stable,n,"Closed, Preview, No Autocollapse, Buttons, Default form display, No default paragraph, Only collapse/edit all enabled. Only wayfinding allowed.",,structured_section
+,Page Structured Section (Custom block type),Lead-in,field_leadin,n,a,,,,"Text (plain, long)",,n,1,Text area (multiple rows),n,,,structured_section
+,Page Structured Section (Custom block type),Button,field_button,n,a,,,,Link,,n,1,Link,n,"Internal and external, link text required.",,structured_section
+,Page Structured Section (Custom block type),Formatted headline,field_formatted_headline,n,a,,,Call to action,"Text (formatted, long)",,n,1,Text area (multiple rows),n,Short Text Formatted HTML allowed. Add field template to render raw and strip out all tags except bold and to render in an H2. Add some admin theming so text area looks like not much content should be entered.,,structured_section
+,Page Structured Section (Custom block type),Text,body,y,a,,,Call to action,"Text (formatted, long, with summary)",,n,1,Text area with a summary,n,"Summary disabled, Limited HTML allowed",,structured_section
+,Page Structured Section (Custom block type),Show program finder?,field_program_finder,n,a,,,Call to action,Boolean,,n,1,Single on/off checkbox,n,,Show the programs search block in the CTA.,structured_section
+,Page Structured Section (Custom block type),Image,field_cta_image,n,a,,,Call to action,Entity reference,Image (Media type),n,1,Media library,n,,<strong>Optimal image size:</strong> is 852x852px,structured_section
+,Page Structured Section (Custom block type),Links,field_cta_links,n,a,,,Call to action,Link,,n,*,Link,n,"Internal and external, link text required.",,structured_section
+,Page Structured Section (Custom block type),Background Image,field_bg_image,n,a,,,,Entity reference,Image (Media type),n,1,Media library,n,,<strong>Optimal image size:</strong> is 1920x1920px. The background image needs to be pre-styled to work with the background color of the section block. ,structured_section
+,,,,,,,,,,,,,,,,,#VALUE!
+,Newsletter (Custom block type),Block description,-,-,d,,,,Entity label,,n,1,Textfield,n,,,newsletter
+,Newsletter (Custom block type),Block Intro,body,y,d,,,,"Text (formatted, long, with summary)",,n,1,Text area with a summary,n,"Summary disabled, Limited HTML allowed",,newsletter
+,Newsletter (Custom block type),Form Embed,field_form_embed,n,d,,,,"Text (plain, long)",,y,1,Text area (multiple rows),n,,,newsletter
+,Newsletter (Custom block type),Modal Header,field_modal_header,n,d,,,Modal Settings (detail),Text (plain),,n,1,Textfield,n,,,newsletter
+,Newsletter (Custom block type),Modal Intro,field_modal_intro,n,d,,,Modal Settings (detail),"Text (formatted, long)",,n,1,Text area (multiple rows),n,Limited HTML allowed,,newsletter
+,Newsletter (Custom block type),Modal Trigger Text,field_modal_trigger,n,d,,,Modal Settings (detail),Text (plain),,n,1,Textfield,n,,This text will be displayed at the end of the block intro and will be the link that opens the form modal.,newsletter
+,Newsletter (Custom block type),Open form modal pop-up,field_form_modal,n,d,,,,Boolean,,n,1,Single on/off checkbox,n,Uses field label,,newsletter
+,,,,,,,,,,,,,,,,,#VALUE!
+,Reusable Widgets (Custom block type),Block description,-,-,a,,,,Entity label,,n,1,Textfield,n,,,reusable_widgets
+,Reusable Widgets (Custom block type),Widgets,-,n,a,,,,Entity Reference Revisions (paragraphs),,n,*,Layout Paragraphs,n,"Closed, Preview, No Autocollapse, Buttons, Default form display, No default paragraph, Only collapse/edit all enabled. All parent paragraphs enabled except quote, hallmark, content carousel, hero, hours set.",,reusable_widgets
+,,,,,,,,,,,,,,,,,#VALUE!
+,Social Media Links (Custom block type),Block description,-,-,x,,,,Entity label,,-,-,Textfield,n,,,social_media_links
+,Social Media Links (Custom block type),Intro,body,y,d,,,,"Text (formatted, long, with summary)",,n,1,Text area with a summary,n,"Summary disabled, Limited HTML allowed",,social_media_links
+,Social Media Links (Custom block type),Platforms,field_platforms,n,a,,,,Link,,y,*,Link,n,"External only, text disable","Paste in the links to your platform pages. <strong>WARNING:</strong> Only Facebook, Twitter, LinkedIn, Instagram, Snapchat, TikTok and YouTube are supported. ",social_media_links
+,,,,,,,,,,,,,,,,,#VALUE!
+,Author (Vocabulary),Blurb,description,-,a,,,,"Text (formatted, long)",,y,1,Text area (multiple rows),n,Limited HTML allowed.,,author
+,Author (Vocabulary),Profile,field_profile,n,a,,,,Entity reference,Profile (Content type),n,1,Autocomplete,n,,,author
+,Author (Vocabulary),Image,field_image,n,a,,,,Entity reference,Image (Media type),n,1,Media library,n,Only renders if a profile is not linked to.,"If a profile is referenced, the profile image will automatically be used. <strong>Optimal image size:</strong>480x480px.",author
+,Author (Vocabulary),Name,field_author_name,n,a,,,,Text (plain),,n,1,Textfield,n,,,author
+,,,,,,,,,,,,,,,,,#VALUE!
+,Page Families (Vocabulary),Contact Information,field_contact,n,a,,,,Entity reference,Contact Library (Content type),n,1,Autocomplete,n,,,page_families
+,Page Families (Vocabulary),Hours,field_hours,n,a,,,,Entity reference,Hours Library (Content type),n,1,Autocomplete,n,,,page_families
+,Page Families (Vocabulary),Social Links,field_platforms,y,a,,,,Link,,y,*,Link,n,"External only, text disable","Paste in the links to your platform pages. <strong>WARNING:</strong> Only Facebook, Twitter, LinkedIn, Instagram, Snapchat, TikTok and YouTube are supported. ",page_families
+,,,,,,,,,,,,,,,,,#VALUE!
+,Accordion Item (Paragraph type),Accordion Header,field_accordion_header,n,x,,,,Text (plain),,y,1,Textfield,n,,,accordion_item
+,Accordion Item (Paragraph type),Intro,field_intro,n,d,,,,"Text (plain, long)",,n,1,Text area (multiple rows),n,Need more info on how this works with the actual accordion header & content. Meant to provide context for the hidden text in the accordion.,,accordion_item
+,Accordion Item (Paragraph type),Text,field_long_text,y,x,,,,"Text (formatted, long)",,y,1,Text area (multiple rows),n,Limited HTML allowed,,accordion_item
+,Accordions (Paragraph type),Widget Title,field_widget_title,y,x,,,,Text (plain),,n,1,Textfield,n,,,accordions
+,Accordions (Paragraph type),Accordions,field_accordion_items,n,x,,,,Entity Reference Revisions (paragraphs),Accordion Item (Paragraph type),y,*,Paragraphs Stable,n,"Closed, Preview, No Autocollapse, Buttons, Default form display, Accordion default paragraph, Only collapse/edit all enabled.",,accordions
+,,,,,,,,,,,,,,,,,#VALUE!
+,Additional Links (Paragraph type),Widget Title,field_widget_title,y,x,,,,Text (plain),,n,1,Textfield,n,,,links_files
+,Additional Links (Paragraph type),Links,field_link_multi,n,x,,,,Link,,n,*,Link,n,"Internal and external, text required",,links_files
+,Additional Links (Paragraph type),Files,field_file_multi,n,x,,,,Entity reference,Document (Media type),n,*,Media library,n,,,links_files
+,,,,,,,,,,,,,,,,,#VALUE!
+,Block Placer (Paragraph type),Widget Title,field_widget_title,y,x,,,,Text (plain),,n,1,Textfield,n,,,block_placer
+,Block Placer (Paragraph type),Block,field_block,n,a,,,,Entity reference,,y,1,Select list,n,"Allowed block types: basic, formatted promo, resuable widgets",,block_placer
+,,,,,,,,,,,,,,,,,#VALUE!
+,Button (Paragraph type),Button,field_link,y,a,,,,Link,,y,1,Link,n,"Internal and external links, link text required.",,button
+,,,,,,,,,,,,,,,,,#VALUE!
+,Contact Placer (Paragraph type),Contact Information,field_contact_info,n,a,,,,Entity reference,Contact Library (Content type),y,1,Autocomplete,n,Render as widget,,contact_placer
+,,,,,,,,,,,,,,,,,#VALUE!
+,Content Carousel (Paragraph type),By tag,field_tag,n,d,,,,Entity reference,Placement Tags (Vocabulary),n,1,Autocomplete,n,,,content_carousel
+,Content Carousel (Paragraph type),List Widgets,field_list_widgets,y,a,,,,Entity reference,List Widgets (Vocabulary),y,*,Select list,n,"Video card, story, snapshot, testimonials set by default. NOTE: Need this because we need a bridge from the paragraph to the content types because the placement tags field is not required.",,content_carousel
+,,,,,,,,,,,,,,,,,#VALUE!
+,Courses (Paragraph type),Headline,field_widget_title,y,d,,,,Text (plain),,n,1,Textfield,n,,,courses
+,Courses (Paragraph type),Courses,field_course_items,n,d,,,,Entity Reference Revisions (paragraphs),Course (Paragraph type),y,*,Paragraphs Stable,n,"Closed, Preview, No Autocollapse, Buttons, Default form display, Course default paragraph, Only collapse/edit all enabled.",,courses
+,Courses (Paragraph type),Link,field_link,y,d,,,,Link,,y,1,Link,n,"Internal and external links, link text required.",,courses
+,Course (Paragraph type),Course Number,field_course_number,y,d,,,,Text (plain),,n,1,Textfield,n,,,course
+,Course (Paragraph type),Course Name,field_course_name,n,d,,,,Text (plain),,n,1,Textfield,n,,,course
+,Course (Paragraph type),Text,field_long_text,y,d,,,,"Text (formatted, long)",,y,1,Text area (multiple rows),n,Limited HTML allowed,,course
+,,,,,,,,,,,,,,,,,#VALUE!
+,CTA Item (Paragraph type),Image,field_image,y,a,,,,Entity reference,Image (Media type),y,1,Media library,n,"CTA trio image thumbnail not shown on mobile. If CTA trio, render as 393x221, if single render as 1920x1445.",<strong>Optimal image size:</strong> 1920x1445 for a CTA bar and 786×442 for CTA Trio images.,cta_item
+,CTA Item (Paragraph type),Headline,field_headline,y,a,,,,Text (plain),,y,1,Textfield,n,,,cta_item
+,CTA Item (Paragraph type),Text,field_additional_text,y,a,,,,"Text (plain, long)",,n,1,Text area (multiple rows),n,,,cta_item
+,CTA Item (Paragraph type),Button,field_link,y,a,,,,Link,,y,1,Link,n,"Internal and external links, link text required.",,cta_item
+,CTAs (Paragraph type),Trio?,field_is_trio,n,a,,,,Boolean,,n,1,Single on/off checkbox,n,"If possible, hide or disable the ability to add more than one CTA if Trio is not true. If trio is true, up to three CTAs can be added. Trio will also be used as a class on the paragraph wrapper for theming. ",,ctas
+,CTAs (Paragraph type),CTA Items,field_cta_items,n,a,,,,Entity Reference Revisions (paragraphs),CTA Item (Paragraph type),n,3,Paragraphs Stable,n,"Closed, Preview, No Autocollapse, Buttons, Default form display, no default paragraph, Only collapse/edit all enabled.",Add three CTA items to make a trio.,ctas
+,CTAs (Paragraph type),CTA Bar,field_cta_bar,n,a,,,,Entity Reference Revisions (paragraphs),CTA Item (Paragraph type),n,1,Paragraphs Stable,n,"Closed, Preview, No Autocollapse, Buttons, Default form display, no default paragraph, Only collapse/edit all enabled.",Add a single CTA where the image will be used a background. ,ctas
+,,,,,,,,,,,,,,,,,#VALUE!
+,Custom Embed (Paragraph type),Widget Title,field_widget_title,y,x,,,,Text (plain),,n,1,Textfield,n,,,custom_embed
+,Custom Embed (Paragraph type),Custom Embed,field_custom_embed,n,x,,,,"Text (plain, long)",,y,1,Text area (multiple rows),n,,,custom_embed
+,,,,,,,,,,,,,,,,,#VALUE!
+,Events List (Paragraph type),College,field_college,y,w,,,,Entity reference,College (Content type),n,1,Autocomplete,n,Only displayed if the list type is 'auto' ,,events_list
+,Events List (Paragraph type),Department,field_department,y,w,,,,Entity reference,Department (Content type),n,1,Autocomplete,n,Only displayed if the list type is 'auto' ,,events_list
+,Events List (Paragraph type),Program,field_program,y,w,,,,Entity reference,Academic Program (Content type),n,1,Autocomplete,n,Only displayed if the list type is 'auto' ,,events_list
+,Events List (Paragraph type),By Placement Tag,field_placement_tag,y,w,,,,Entity reference,Placement Tags (Vocabulary),n,1,Autocomplete,n,,,events_list
+,Events List (Paragraph type),By Page Family,field_page_family,y,w,,,,Entity reference,Page Families (Vocabulary),n,1,Autocomplete,n,,,events_list
+,,,,,,,,,,,,,,,,,#VALUE!
+,Facts List (Paragraph type),List Type,field_list_type,y,a,,,,List (text),,y,1,Select list,n,Options include Auto and Manual. Default is auto,,facts_list
+,Facts List (Paragraph type),College,field_college,y,a,,,,Entity reference,College (Content type),n,1,Autocomplete,n,Only displayed if the list type is 'auto' ,,facts_list
+,Facts List (Paragraph type),Department,field_department,y,a,,,,Entity reference,Department (Content type),n,1,Autocomplete,n,Only displayed if the list type is 'auto' ,,facts_list
+,Facts List (Paragraph type),Program,field_program,y,a,,,,Entity reference,Academic Program (Content type),n,1,Autocomplete,n,Only displayed if the list type is 'auto' ,,facts_list
+,Facts List (Paragraph type),By Placement Tag,field_placement_tag,y,a,,,,Entity reference,Placement Tags (Vocabulary),n,1,Autocomplete,n,Only displayed if the list type is 'auto' ,,facts_list
+,Facts List (Paragraph type),By Page Family,field_page_family,y,a,,,,Entity reference,Page Families (Vocabulary),n,1,Autocomplete,n,Only displayed if the list type is 'auto' ,,facts_list
+,Facts List (Paragraph type),Limit List,field_limit_list,y,d,,,,Number (integer),,n,1,Number field,n,"Max of 5, 5 set by default",Does not affect manual lists.,facts_list
+,Facts List (Paragraph type),Manually Select,field_facts,y,a,,,,Entity reference,Fact Library (Content type),n,5,Autocomplete,n,Only displayed if the list type is 'manual',,facts_list
+,Facts List (Paragraph type),List Widget,field_list_widget,y,a,,,,Entity reference,List Widgets (Vocabulary),y,1,Select list,n,Fact term selected by default. Field hidden from paragraph form.,,facts_list
+,,,,,,,,,,,,,,,,,#VALUE!
+,Fauxfile Item (Paragraph type),Image,field_image,y,a,,,,Entity reference,Image (Media type),n,1,Media library,n,Render as square,<strong>Optimal image size:</strong> 720x720px,fauxfile_item
+,Fauxfile Item (Paragraph type),Name,field_name,n,a,,,,Text (plain),,y,1,Textfield,n,,,fauxfile_item
+,Fauxfile Item (Paragraph type),Text,field_long_text,y,d,,,,"Text (formatted, long)",,n,1,Text area (multiple rows),n,Limited HTML allowed. Not sure we need this at all,,fauxfile_item
+,Fauxfile Item (Paragraph type),Title,field_job_title,n,a,,,,Text (plain),,n,1,Textfield,n,,"If a person has multiple title, use a pipe to separate them.",fauxfile_item
+,Fauxfile Item (Paragraph type),Email,field_email,n,a,,,,Email,,n,1,Email,n,,,fauxfile_item
+,Fauxfile Item (Paragraph type),Phone,field_phone,n,a,,,,Telephone number,,n,1,Telephone number,n,,,fauxfile_item
+,Fauxfile (Paragraph type),Widget Title,field_widget_title,y,a,,,,Text (plain),,n,1,Textfield,n,,,fauxfile
+,Fauxfile (Paragraph type),Fauxfile Items,field_fauxfile_items,n,a,,,,Entity Reference Revisions (paragraphs),Fauxfile Item (Paragraph type),y,*,Paragraphs Stable,n,"Closed, Preview, No Autocollapse, Buttons, Default form display, Fauxfile default paragraph, Only collapse/edit all enabled.",,fauxfile
+,,,,,,,,,,,,,,,,,#VALUE!
+,Form Placer (Paragraph type),Webform,field_form,n,d,,,,Webform,,y,1,Select list,n,No default submission data,,form_placer
+,Form Placer (Paragraph type),Display webform title,field_form_title,n,d,,,,Boolean,,n,1,Single on/off checkbox,n,,,form_placer
+,Form Placer (Paragraph type),Slate form,field_slate_form,n,d,,,Slate,,,,,,,,,form_placer
+,Form Placer (Paragraph type),Parameters?,field_parameters_,,d,,,Slate,,,,,,,Need more information,,form_placer
+,,,,,w,,,,,,,,,,,,#VALUE!
+,Gallery Item (Paragraph type),Image,field_image,y,a,,,,Entity reference,Image (Media type),y,*,Media library,n,"Render correct size based on gallery type (360x360 for tile thumbnails and 650x650 for lightbox image, 1096x619 for slideshow, mix of 758x428 and 539x304 for masonry - have to figure out now to do that (maybe some sort of Twig Nth type or random?)","<strong>Optimal image size:</strong> is 1516x856px for masonory and slideshows, 1300x1300 for lightobx galleries.",gallery_item
+,Gallery Item (Paragraph type),Caption Headline,field_caption_headline,y,a,,,,Text (plain),,n,1,Textfield,n,"Displayed below slides in slideshow, under lightbox images in lightbox, not at all for masonry",,gallery_item
+,Gallery Item (Paragraph type),Caption,field_caption,y,a,,,,"Text (plain, long)",,n,1,Text area (multiple rows),n,"Displayed below slides in slideshow, under lightbox images in lightbox, not at all for masonry",,gallery_item
+,Gallery (Paragraph type),Widget Title,field_widget_title,y,d,,,,Text (plain),,n,1,Textfield,n,,,gallery
+,Gallery (Paragraph type),Gallery Type,field_gallery_type,n,d,,,,Boolean,,y,1,Check boxes/radio buttons,n,"On = Slider, Off = Lightbox",,gallery
+,Gallery (Paragraph type),Gallery Style,field_gallery_style,n,a,,,,List (text),,y,1,Select list,n,"Options: Slider, Tile, Masonry",Image captions and caption headers will not be displayed in masonry galleries and will be displayed in the lightbox on tile galleries.,gallery
+,,,,,,,,,,,,,,,,,#VALUE!
+,Hallmark (Paragraph type),Image,field_image,y,a,,,,Entity reference,Image (Media type),y,1,Media library,n,Render at 874x492,<strong>Optimal image size:</strong> 1078x608px. ,hallmark
+,Hallmark (Paragraph type),Headline,field_headline,y,a,,,,Text (plain),,y,1,Textfield,n,,,hallmark
+,Hallmark (Paragraph type),Text,field_long_text,y,a,,,,"Text (formatted, long)",,y,1,Text area (multiple rows),n,Limited HTML allowed,,hallmark
+,Hallmark (Paragraph type),Link,field_link,y,a,,,,Link,,n,1,Link,n,"Internal and external links, link text required",,hallmark
+,Hallmark (Paragraph type),Text placement,field_text_placement,y,a,,,,List (text),,y,1,Select list,n,"Options: Left, Right. Default is left.",,hallmark
+,,,,,,,,,,,,,,,,,#VALUE!
+,Hero (Paragraph type),Hero Type,field_hero_type,n,a,,,,List (text),,y,1,Select list,n,"Options: Image, Background Image, Full Width Image, Pattern, Video",,hero
+,Hero (Paragraph type),Background/Full Image,field_background_image,y,a,,,,Entity reference,Image (Media type),n,1,Media library,n,Render as 1920x1445 and use object fit,"<strong>Optimal image size:</strong> 1920x1445px. If this is a video or backgorund hero, the image should be pre-styled to work sa the hero background. If this is a full image hero, no prestyling is needed.",hero
+,Hero (Paragraph type),Image,field_image,y,a,,,,Entity reference,Image (Media type),n,1,Media library,n,Render as 730x840 ,<strong>Optimal image size:</strong> 1460x1680px. This image is the large portrait color image in the right side of image and background heros.,hero
+,Hero (Paragraph type),Links,field_links,y,a,,,,Link,,n,*,Link,n,"Internal and external links, link text required",Links will not be shown on a vdeo hero.,hero
+,Hero (Paragraph type),Video,field_hero_video,n,a,,,,File,,n,2,File,n,"Allowed formats: webm, mp4. For video tag, add poster attribute using poster field, add playsinline autoplay, muted, loop",,hero
+,Hero (Paragraph type),Video Poster,field_video_poster,n,a,,,,Entity reference,Image (Media type),n,1,Media library,n,,This image will show as the video loads and if the video is unable to play on mobile. <strong>Optimal image size:</strong> is 1920x1540px,hero
+,,,,,,,,,,,,,,,,,#VALUE!
+,Highlight Box (Paragraph type),Headline,field_headline,y,a,,,,"Text (plain, long)",,y,1,Text area (multiple rows),n,,,highlight_box
+,Highlight Box (Paragraph type),Text,field_additional_text,y,d,,,,"Text (plain, long)",,y,1,Text area (multiple rows),n,,,highlight_box
+,Highlight Box (Paragraph type),Link,field_link,y,a,,,,Link,,n,1,Link,n,"Internal and external links, link text required",,highlight_box
+,,,,,,,,,,,,,,,,,#VALUE!
+,Hours Placer (Paragraph type),Hours,field_hours,n,a,,,,Entity reference,Hours Library (Content type),n,*,Autocomplete,n,Render as widget view mode,,hours_placer
+,,,,,,,,,,,,,,,,,#VALUE!
+,Hours Set (Paragraph type),Set Title,field_headline,n,a,,,,Text (plain),,y,1,Textfield,n,,"This could be the location, season or other piece of identifying information. It will only be displayed if multiple sets of hours are added to the library item.",hours_set
+,Hours Set (Paragraph type),Hours,field_hours,n,a,,,,Office Hours,,y,1,Office Hours,n,,,hours_set
+,Hours Set (Paragraph type),Display Range,field_display_range,n,a,,,,Date range,,n,1,Date and time range,n,Date only,Set the dates for which this set of hours should be displayed. Leave blank to display year round.,hours_set
+,Hours Set (Paragraph type),Exception Dates,field_exceptions,n,a,,,,Text (plain),,n,1,Textfield,n,Display only if current date is in the exception display rangie,Enter special dates where hours vary.,hours_set
+,Hours Set (Paragraph type),Exception Display Range,field_exception_range,n,a,,,,Date range,,n,1,Date and time range,n,Date only,Set the dates for which the exception dates should be displayed. Leave blank to display year round.,hours_set
+,,,,,,,,,,,,,,,,,#VALUE!
+,Image (Paragraph type),Widget Title,field_widget_title,y,d,,,,Text (plain),,n,1,Textfield,n,,,image
+,Image (Paragraph type),Image,field_image,y,a,,,,Entity reference,Image (Media type),y,1,Media library,n,Render as 874x492,<strong>Optimal image size:</strong> is 1748×984px,image
+,Image (Paragraph type),Image Size,field_image_size,n,a,,,,List (text),,y,1,Select list,n,Render according to size selected,"Choose the display size for this image. The full cropped option will render the largest size and will crop the image to 974x492 on large screen. Small, medium and large will not crop the image but will scale it to fit in a 200px, 400px or 600px box respectively. Non-cropped sizes will not be upscaled so upload the largest version of the image you have in order to ensure the best rendering.",image
+,Image (Paragraph type),Caption Headline,field_caption_headline,y,a,,,,Text (plain),,n,1,Textfield,n,,,image
+,Image (Paragraph type),Caption,field_caption,y,a,,,,"Text (plain, long)",,n,1,Text area (multiple rows),n,,,image
+,Image (Paragraph type),Caption Placement,field_alignment,y,a,,,,List (text),,n,1,Select list,n,"Options: No Caption, Left, Right, Below.  Add as theming classes to wrapper in twig template. If no caption, hide the caption and caption headline fields from admin side and don't render in Twig.",,image
+,Image (Paragraph type),Link,field_link,n,d,,,,Link,,n,1,Link,n,"Internal and external, no text",,image
+,,,,,,,,,,,,,,,,,#VALUE!
+,Layout Section (Paragraph type),Section Title,field_section_title,y,d,,,,Text (plain),,n,1,Textfield,n,,,layout_section
+,Layout Section (Paragraph type),Background,field_style,n,d,,,,Entity reference,Section Styles (Vocabulary),n,1,Select list,n,,"If you are adding elements that have color or image backgrounds (CTAs, etc ), do not add a background to the section.",layout_section
+,Layout Section (Paragraph type),Background Size,field_bg_size,n,d,,,,List (text),,y,1,Select list,n,"Options: Full screen, Content Width",,layout_section
+,,,,,,,,,,,,,,,,,#VALUE!
+,Map (Paragraph type),Widget Title,field_widget_title,y,d,,,,Text (plain),,n,1,Textfield,n,,,map
+,Map (Paragraph type),Location,field_location,n,d,,,,Geolocation,,y,1,Geolocation Google Maps API,n,,Use the autocomplete search function the map to select an address or well-know place. The location will automatically be added in the address field below (it may take a second or two to appear).,map
+,Map (Paragraph type),Address,field_address,n,d,,,,Address,,y,1,Address field,n,Should autopopulate from geolocation field,,map
+,,,,,w,,,,,,,,,,,,#VALUE!
+,Portal (Paragraph type),Image,field_image,y,d,,,,Entity reference,Image (Media type),y,1,Media library,n,,<strong>Optimal image size:</strong> is 800x600px,portal
+,Portal (Paragraph type),Headline,field_headline,y,d,,,,Text (plain),,y,1,Textfield,n,,,portal
+,Portal (Paragraph type),Link,field_link,y,d,,,,Link,,y,1,Link,n,"Internal and external links, no link text",,portal
+,Portal (Paragraph type),Additional Information,field_long_text,y,d,,,,"Text (formatted, long)",,n,1,Text area (multiple rows),n,Limited HTML allowed,,portal
+,Portals (Paragraph type),Widget Title,field_widget_title,y,d,,,,Text (plain),,n,1,Textfield,n,,,portals
+,Portals (Paragraph type),Portals,field_portals,n,d,,,,Entity Reference Revisions (paragraphs),Portal (Paragraph type),y,*,Paragraphs Stable,n,"Closed, Preview, No Autocollapse, Buttons, Default form display, Portal default paragraph, Only collapse/edit all enabled.",,portals
+,,,,,,,,,,,,,,,,,#VALUE!
+,Profiles List (Paragraph type),Widget Title,field_widget_title,y,a,,,,Text (plain),,n,1,Textfield,n,,,profiles_list
+,Profiles List (Paragraph type),List Type,field_list_type,n,a,,,,List (text),,y,1,Select list,n,Options include 'Auto' and Manual. Default is auto,,profiles_list
+,Profiles List (Paragraph type),Department,field_department,y,a,,,,Entity reference,Department (Content type),n,1,Autocomplete,n,Only displayed if the list type is 'auto' ,,profiles_list
+,Profiles List (Paragraph type),Program,field_program,y,a,,,,Entity reference,Academic Program (Content type),n,1,Autocomplete,n,Only displayed if the list type is 'auto' ,,profiles_list
+,Profiles List (Paragraph type),By Placement Tag,field_placement_tag,y,d,,,,Entity reference,Placement Tags (Vocabulary),n,1,Autocomplete,n,Only displayed if the list type is 'auto' ,,profiles_list
+,Profiles List (Paragraph type),By Page Family,field_page_family,y,a,,,,Entity reference,Page Families (Vocabulary),n,1,Autocomplete,n,Only displayed if the list type is 'auto' ,,profiles_list
+,Profiles List (Paragraph type),Manually Select,field_profiles,y,a,,,,Entity reference,Profile (Content type),n,*,Autocomplete,n,Only displayed if the list type is 'manual' ,,profiles_list
+,Profiles List (Paragraph type),Limit List,field_limit_list,y,a,,,,List (integer),,n,1,Single on/off checkbox,n,,Limit the profiles list to a certain number. Should be used with randomize. Will not work with manually selected profiles.,profiles_list
+,Profiles List (Paragraph type),Randomize Bios,field_randomize,y,a,,,,Boolean,,n,1,Single on/off checkbox,n,"If true, the bios list view uses a random sort instead of being sorted alphabetically by last name. If the manual list function is used, then use the |shuffle Twig filter on the list of manual bios if this is true.",Will not work with a manual list.,profiles_list
+,Profiles List (Paragraph type),List Widget,field_list_widget,y,a,,,,Entity reference,List Widgets (Vocabulary),y,1,Select list,n,Profiles term selected by default. Field hidden from paragraph form.,,profiles_list
+,,,,,,,,,,,,,,,,,#VALUE!
+,Programs List (Paragraph type),List Type,field_list_type,y,a,,,,List (text),,y,1,Select list,n,Options include Auto and Manual. Default is auto,,programs_list
+,Programs List (Paragraph type),Department,field_department,y,a,,,,Entity reference,Department (Content type),n,1,Autocomplete,n,Only displayed if the list type is 'auto' ,,programs_list
+,Programs List (Paragraph type),By Placement Tag,field_placement_tag,y,a,,,,Entity reference,Placement Tags (Vocabulary),n,1,Autocomplete,n,Only displayed if the list type is 'auto' ,,programs_list
+,Programs List (Paragraph type),By Page Family,field_page_family,y,a,,,,Entity reference,Page Families (Vocabulary),n,1,Autocomplete,n,Only displayed if the list type is 'auto' ,,programs_list
+,Programs List (Paragraph type),Limit List,field_limit_list,y,a,,,,Number (integer),,n,1,Number field,n,,Does not affect manual lists.,programs_list
+,Programs List (Paragraph type),Manually Select,field_programs,y,a,,,,Entity reference,Academic Program (Content type),n,5,Autocomplete,n,Only displayed if the list type is 'manual',,programs_list
+,Programs List (Paragraph type),List Widget,field_list_widget,y,a,,,,Entity reference,List Widgets (Vocabulary),y,1,Select list,n,Program term selected by default. Field hidden from paragraph form.,,programs_list
+,,,,,,,,,,,,,,,,,#VALUE!
+,Program Search (Paragraph type),Widget Title,field_widget_title,y,a,,,,Text (plain),,n,1,Textfield,n,,,program_search
+,,,,,,,,,,,,,,,,,#VALUE!
+,Quote (Paragraph type),Widget Title,field_widget_title,y,d,,,,Text (plain),,n,1,Textfield,n,,,quote
+,Quote (Paragraph type),Quote,field_quote,n,a,,,,"Text (plain, long)",,y,1,Text area (multiple rows),n,,Do not use quotation marks.,quote
+,Quote (Paragraph type),Source,field_source,n,a,,,,Text (plain),,n,1,Textfield,n,,,quote
+,Quote (Paragraph type),Image,field_image,y,d,,,,Entity reference,Image (Media type),n,1,Media library,n,,<strong>Optimal image size:</strong>720x720px.,quote
+,,,,,,,,,,,,,,,,,#VALUE!
+,Select Item (Paragraph type),Headline,field_headline,y,a,,,,Text (plain),,y,1,Textfield,n,,,select_item
+,Select Item (Paragraph type),Text,field_additional_text,y,a,,,,"Text (plain, long)",,y,1,Text area (multiple rows),n,,,select_item
+,Select Item (Paragraph type),Link,field_link,y,a,,,,Link,,y,1,Link,n,"Internal and external links, link text required.",,select_item
+,Select Type (Paragraph type),Widget Title,field_widget_title,y,a,,,,Text (plain),,n,1,Textfield,n,,,select_type
+,Select Type (Paragraph type),Select Items,field_select_items,n,a,,,,Entity Reference Revisions (paragraphs),Select Item (Paragraph type),y,5,Paragraphs Stable,n,"Closed, Preview, No Autocollapse, Buttons, Default form display, Select Item default paragraph, Only collapse/edit all enabled.",,select_type
+,,,,,,,,,,,,,,,,,#VALUE!
+,Snapshot List (Paragraph type),List Title,field_widget_title,y,a,,,,Text (plain),,n,1,Textfield,n,,,snapshot_list
+,Snapshot List (Paragraph type),List Type,field_list_type,y,a,,,,List (text),,y,1,Select list,n,Options include Auto and Manual. Default is auto,"<strong>WARNING:</strong> If there are less than three results that match your auto list parameters, this widget will not be displayed.",snapshot_list
+,Snapshot List (Paragraph type),College,field_college,y,a,,,,Entity reference,College (Content type),n,1,Autocomplete,n,Only displayed if the list type is 'auto' ,,snapshot_list
+,Snapshot List (Paragraph type),Department,field_department,y,a,,,,Entity reference,Department (Content type),n,1,Autocomplete,n,Only displayed if the list type is 'auto' ,,snapshot_list
+,Snapshot List (Paragraph type),Program,field_program,y,a,,,,Entity reference,Academic Program (Content type),n,1,Autocomplete,n,Only displayed if the list type is 'auto' ,,snapshot_list
+,Snapshot List (Paragraph type),By Placement Tag,field_placement_tag,y,a,,,,Entity reference,Placement Tags (Vocabulary),n,1,Autocomplete,n,Only displayed if the list type is 'auto' ,,snapshot_list
+,Snapshot List (Paragraph type),By Page Family,field_page_family,y,a,,,,Entity reference,Page Families (Vocabulary),n,1,Autocomplete,n,Only displayed if the list type is 'auto' ,,snapshot_list
+,Snapshot List (Paragraph type),By Type,field_snapshot_type,n,a,,,,Entity reference,Snapshot Types (Vocabulary),n,1,Select list,n,Only displayed if the list type is 'auto' ,,snapshot_list
+,Snapshot List (Paragraph type),Limit List,field_limit_list,y,d,,,,Number (integer),,n,1,Number field,n,Max of 3,Does not affect manual lists.,snapshot_list
+,Snapshot List (Paragraph type),Manually Select,field_manual_select,y,a,,,,Entity reference,Snapshot List (Paragraph type),n,3,Autocomplete,n,Only displayed if the list type is 'manual' ,,snapshot_list
+,Snapshot List (Paragraph type),List Widget,field_list_widget,y,a,,,,Entity reference,List Widgets (Vocabulary),y,1,Select list,n,Snapshot term selected by default. Field hidden from paragraph form.,,snapshot_list
+,,,,,,,,,,,,,,,,,#VALUE!
+,Social Media Links (Custom block type),Platforms,field_platforms,n,a,,,,Link,,y,*,Link,n,"External only, text disable","Paste in the links to your platform pages. <strong>WARNING:</strong> Only Facebook, Twitter, LinkedIn, Instagram, Snapchat, TikTok and YouTube are supported. ",social_media_links
+,,,,,,,,,,,,,,,,,#VALUE!
+,Step Item (Paragraph type),Headline,field_headline,y,a,,,,Text (plain),,y,1,Textfield,n,,,step_item
+,Step Item (Paragraph type),Text,field_long_text,y,a,,,,"Text (formatted, long)",,y,1,Text area (multiple rows),n,Limited HTML allowed,,step_item
+,Step Item (Paragraph type),Icon,field_icon,y,a,,,,Entity reference,Icon (Media type),n,1,Media library,n,Ideally shows the media library of icons without the ability to upload new ones. Render as default,,step_item
+,Step Item (Paragraph type),Link,field_link,y,a,,,,Link,,n,1,Link,n,"Internal and external links, link text required.",,step_item
+,Steps (Paragraph type),Icons?,field_use_icon,n,a,,,,Boolean,,n,1,Single on/off checkbox,n,"If icons is yes, then the icon field should be shown on step item sub-paragraphs in the node edit form, otherwise it should not be. If yes, and icons exist in sub paragraphs they will be shown on the front-end.",Guidance on when to have an icon and when not - need actual text from UWEC,steps
+,Steps (Paragraph type),Step Items,field_step_items,n,a,,,,Entity Reference Revisions (paragraphs),Step Item (Paragraph type),y,*,Paragraphs Stable,n,"Closed, Preview, No Autocollapse, Buttons, Default form display, Select Item default paragraph, Only collapse/edit all enabled.",,steps
+,,,,,,,,,,,,,,,,,#VALUE!
+,Stories & Video List (Paragraph type),List Title,field_widget_title,y,a,,,,Text (plain),,n,1,Textfield,n,,,stories_video_list
+,Stories & Video List (Paragraph type),List Type,field_list_type,y,a,,,,List (text),,y,1,Select list,n,Options include 'Auto' and Manual. Default is auto,"<strong>WARNING:</strong> If there are less than three results that match your auto list parameters, this widget will not be displayed.",stories_video_list
+,Stories & Video List (Paragraph type),College,field_college,y,a,,,,Entity reference,College (Content type),n,1,Autocomplete,n,Only displayed if the list type is 'auto' ,,stories_video_list
+,Stories & Video List (Paragraph type),Department,field_department,y,a,,,,Entity reference,Department (Content type),n,1,Autocomplete,n,Only displayed if the list type is 'auto' ,,stories_video_list
+,Stories & Video List (Paragraph type),Program,field_program,y,a,,,,Entity reference,Academic Program (Content type),n,1,Autocomplete,n,Only displayed if the list type is 'auto' ,,stories_video_list
+,Stories & Video List (Paragraph type),By Placement Tag,field_placement_tag,y,a,,,,Entity reference,Placement Tags (Vocabulary),n,1,Autocomplete,n,Only displayed if the list type is 'auto' ,,stories_video_list
+,Stories & Video List (Paragraph type),By Page Family,field_page_family,y,a,,,,Entity reference,Page Families (Vocabulary),n,1,Autocomplete,n,Only displayed if the list type is 'auto' ,,stories_video_list
+,Stories & Video List (Paragraph type),By Type,field_type,y,a,,,,Entity reference,Page Families (Vocabulary),n,1,Autocomplete,n,Only displayed if the list type is 'auto' ,,stories_video_list
+,Stories & Video List (Paragraph type),Limit List,field_limit_list,y,d,,,,Number (integer),,n,1,Number field,n,,,stories_video_list
+,Stories & Video List (Paragraph type),Manually Select,field_manual_select,y,a,,,,Entity reference,Stories & Video List (Paragraph type),n,3,Autocomplete,n,Only displayed if the list type is 'manual',,stories_video_list
+,Stories & Video List (Paragraph type),List Widgets,field_list_widgets,y,a,,,,Entity reference,List Widgets (Vocabulary),y,*,Select list,n,Story and video terms selected by default. Field hidden from paragraph form.,,stories_video_list
+,,,,,,,,,,,,,,,,,#VALUE!
+,Testimonial Placer (Paragraph type),List Type,field_list_type,y,a,,,,List (text),,y,1,Select list,n,Options include Auto and Manual. Default is auto,,testimonial_placer
+,Testimonial Placer (Paragraph type),College,field_college,y,a,,,,Entity reference,College (Content type),n,1,Autocomplete,n,Only displayed if the list type is 'auto' ,,testimonial_placer
+,Testimonial Placer (Paragraph type),Department,field_department,y,a,,,,Entity reference,Department (Content type),n,1,Autocomplete,n,Only displayed if the list type is 'auto' ,,testimonial_placer
+,Testimonial Placer (Paragraph type),Program,field_program,y,a,,,,Entity reference,Academic Program (Content type),n,1,Autocomplete,n,Only displayed if the list type is 'auto' ,,testimonial_placer
+,Testimonial Placer (Paragraph type),By Placement Tag,field_placement_tag,y,a,,,,Entity reference,Placement Tags (Vocabulary),n,1,Autocomplete,n,Only displayed if the list type is 'auto' ,,testimonial_placer
+,Testimonial Placer (Paragraph type),By Page Family,field_page_family,y,a,,,,Entity reference,Page Families (Vocabulary),n,1,Autocomplete,n,Only displayed if the list type is 'auto' ,,testimonial_placer
+,Testimonial Placer (Paragraph type),Manually Select,field_testimonial,n,a,,,,Entity reference,Testimonial Library (Content type),n,1,Autocomplete,n,Only displayed if the list type is 'manual' ,,testimonial_placer
+,Testimonial Placer (Paragraph type),List Widget,field_list_widget,y,a,,,,Entity reference,List Widgets (Vocabulary),y,1,Select list,n,Testimonial term selected by default. Field hidden from paragraph form.,,testimonial_placer
+,,,,,,,,,,,,,,,,,#VALUE!
+,Text (Paragraph type),Widget Title,field_widget_title,y,a,,,,Text (plain),,n,1,Textfield,n,,,text
+,Text (Paragraph type),Text,field_long_text,y,x,,,,"Text (formatted, long)",,y,1,Text area (multiple rows),n,Basic HTML allowed,,text
+,,,,,,,,,,,,,,,,,#VALUE!
+,Video (Paragraph type),Widget Title,field_widget_title,y,a,,,,Text (plain),,n,1,Textfield,n,,,video
+,Video (Paragraph type),Subheader,field_headline,y,d,,,,Text (plain),,n,1,Textfield,n,,,video
+,Video (Paragraph type),Video URL,field_video,n,x,,,,Entity reference,Remote Video (Media type),y,1,Media library,n,,,video
+,Video (Paragraph type),Text,field_long_text,y,d,,,,"Text (formatted, long)",,n,1,Text area (multiple rows),n,Limited HTML allowed,,video
+,,,,,,,,,,,,,,,,,#VALUE!
+,Video Card List (Paragraph type),List Type,field_list_type,y,d,,,,List (text),,y,1,Select list,n,Options include Tag and Manual,,video_card_list
+,Video Card List (Paragraph type),By Tag,field_tag,y,d,,,,Entity reference,Placement Tags (Vocabulary),n,1,Autocomplete,n,,,video_card_list
+,Video Card List (Paragraph type),Limit List,field_limit_list,y,d,,,,Number (integer),,n,1,Number field,n,Max of 3,,video_card_list
+,Video Card List (Paragraph type),Manually Select,field_manual_select,y,d,,,,Entity reference,Fact Library (Content type),n,*,Autocomplete,n,,,video_card_list
+,Video Card List (Paragraph type),List Widget,field_list_widget,y,d,,,,Entity reference,List Widgets (Vocabulary),y,1,Select list,n,Video Card term selected by default. Field hidden from paragraph form.,,video_card_list
+,,,,,,,,,,,,,,,,,#VALUE!
+,View Placer (Paragraph type),View,field_view,n,a,,,,List (text),,y,1,Select list,n,"Options: Each 'main' content view embed will be an option (all stories, program search, directory, etc)",,view_placer
+,,,,,,,,,,,,,,,,,#VALUE!
+,Wayfinding (Paragraph type),Version,field_version,n,a,,,,List (text),,n,1,Single on/off checkbox,n,"Options: Combo, box, single.  If combo = yes, then the the buttons (multifield) field is shown on the widget, otherwise the single button widget and image is shown. Version should also be a class on the paragraph wrapper if enabled because the theming will change based on combo or single. The image size also changes based on whether its box or single. ","Wayfinding box will allow one button and layout with the image locked to the left inside of a stylized border. Wayfinding combo does not show an image and allows three buttons. Wayfinding single is similar to the box version but does not have border, the image is slightly larger and you have choice to place the image to the left or right.",wayfinding
+,Wayfinding (Paragraph type),Eyebrow,field_eyebrow,y,d,,,,Entity reference,Eyebrows (Vocabulary),n,1,Select list,n,,,wayfinding
+,Wayfinding (Paragraph type),Headline,field_headline,y,a,,,,Text (plain),,y,1,Textfield,n,,,wayfinding
+,Wayfinding (Paragraph type),Text,field_additional_text,y,a,,,,"Text (plain, long)",,y,1,Text area (multiple rows),n,,,wayfinding
+,Wayfinding (Paragraph type),Button,field_link,y,a,,,,Link,,y,1,Link,n,"Internal and external links, link text required.",,wayfinding
+,Wayfinding (Paragraph type),Buttons,field_link_multi,y,a,,,,Link,,y,4,Link,n,"Internal and external links, link text required.",,wayfinding
+,Wayfinding (Paragraph type),Pattern,field_pattern,y,d,,,,List (text),,n,1,Select list,n,List of patterns (TBD which patterns) that add a pattern class to the paragraph to pull a pattern file from the theme and use it as the background. ,,wayfinding
+,Wayfinding (Paragraph type),Image,field_image,y,a,,,,Entity reference,Image (Media type),n,1,Media library,n,"Render 360x360 if single, 426x426 if detail, no image if combo.",<strong>Optimal image size:</strong>852x852px,wayfinding
+,Wayfinding (Paragraph type),Text placement,field_text_placement,y,a,,,,List (text),,y,1,Select list,n,"Options: Left, Right. Default is left. (Only show/used for detail version)",,wayfinding

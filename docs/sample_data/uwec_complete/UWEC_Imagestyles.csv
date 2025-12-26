@@ -1,0 +1,104 @@
+ID,Style name,Machine name,X,Dev,QA,Notes
+,42x42,42x42,a,,,"Focal point scale and crop to 42x42, convert to WebP"
+,42x42 1.5x,42x42_1_5x,a,,,"Focal point scale and crop to 63x63, Image Style Quality 50%, convert to WebP"
+,42x42 2x,42x42_2x,a,,,"Focal point scale and crop to 84x84, Image Style Quality 45%, convert to WebP"
+,42x42 Non-WebP,42x42_non-webp,a,,,Focal point scale and crop to 42x42
+,200x200 (Non Crop),200x200_non_crop,a,,,"Scale wdith/height to 200x200, convert to WebP"
+,200x200 (Non Crop) 1.5x,200x200_non_crop_1_5x,a,,,"Scale wdith/height to 300x300, Image Style Quality 45%, convert to WebP"
+,200x200 (Non Crop) 2x,200x200_non_crop_2x,a,,,"Scale wdith/height to 400x400, Image Style Quality 40%, convert to WebP"
+,200x200 (Non Crop) Non-WebP,200x200_non_crop_non-webp,a,,,Scale wdith/height to 200x200
+,240x240,240x240,a,,,"Focal point scale and crop to 240x240, convert to WebP"
+,240x240 1.5x,240x240_1_5x,a,,,"Focal point scale and crop to 360x360, Image Style Quality 45%, convert to WebP"
+,240x240 2x,240x240_2x,a,,,"Focal point scale and crop to 480x480, Image Style Quality 40%, convert to WebP"
+,240x240 Non-WebP,240x240_non-webp,a,,,Focal point scale and crop to 240x240
+,360x360,360x360,x,,,"Focal point scale and crop to 360x360, convert to WebP"
+,360x360 1.5x,360x360_1_5x,x,,,"Focal point scale and crop to 540x540, Image Style Quality 40%, convert to WebP"
+,360x360 2x,360x360_2x,x,,,"Focal point scale and crop to 720x720, Image Style Quality 35%, convert to WebP"
+,360x360 Non-WebP,360x360_non-webp,x,,,Focal point scale and crop to 360x360
+,393x221,393x221,a,,,"Focal point scale and crop to 393x221, convert to WebP"
+,393x221 1.5x,393x221_1_5x,a,,,"Focal point scale and crop to 590x332, Image Style Quality 45%, convert to WebP"
+,393x221 2x,393x221_2x,a,,,"Focal point scale and crop to 786x442, Image Style Quality 40%, convert to WebP"
+,393x221 Non-WebP,393x221_non-webp,a,,,Focal point scale and crop to 393x221
+,426x426,426x426,a,,,"Focal point scale and crop to 426x426, convert to WebP"
+,426x426 1.5x,426x426_1_5x,a,,,"Focal point scale and crop to 639x639, Image Style Quality 40%, convert to WebP"
+,426x426 2x,426x426_2x,a,,,"Focal point scale and crop to 852x852, Image Style Quality 35%, convert to WebP"
+,426x426 Non-WebP,426x426_non-webp,a,,,Focal point scale and crop to 426x426
+,426x508,426x508,a,,,"Focal point scale and crop to 426x508, convert to WebP"
+,426x508 1.5x,426x508_1_5x,a,,,"Focal point scale and crop to 639x762, Image Style Quality 40%, convert to WebP"
+,426x508 2x,426x508_2x,a,,,"Focal point scale and crop to 852x1016, Image Style Quality 35%, convert to WebP"
+,426x508 Non-WebP,426x508_non-webp,a,,,Focal point scale and crop to 426x508
+,492x492,492x492,a,,,"Focal point scale and crop to 492x492, convert to WebP"
+,492x492 1.5x,492x492_1_5x,a,,,"Focal point scale and crop to 738x738, Image Style Quality 40%, convert to WebP"
+,492x492 2x,492x492_2x,a,,,"Focal point scale and crop to 984x984, Image Style Quality 35%, convert to WebP"
+,492x492 Non-WebP,492x492_non-webp,a,,,Focal point scale and crop to 492x492
+,539x304,539x304,a,,,"Focal point scale and crop to 539x304, convert to WebP"
+,539x304 1.5x,539x304_1_5x,a,,,"Focal point scale and crop to 809x456, Image Style Quality 35%, convert to WebP"
+,539x304 2x,539x304_2x,a,,,"Focal point scale and crop to 1078x608, Image Style Quality 30%, convert to WebP"
+,539x304 Non-WebP,539x304_non-webp,a,,,Focal point scale and crop to 539x304
+,650x650,650x650,a,,,"Focal point scale and crop to 650x650, convert to WebP"
+,650x650 1.5x,650x650_1_5x,a,,,"Focal point scale and crop to 975x975, Image Style Quality 40%, convert to WebP"
+,650x650 2x,650x650_2x,a,,,"Focal point scale and crop to 1300x1300, Image Style Quality 35%, convert to WebP"
+,650x650 Non-WebP,650x650_non-webp,a,,,Focal point scale and crop to 650x650
+,730x840,730x840,a,,,"Focal point scale and crop to 730x840, convert to WebP"
+,730x840 1.5x,730x840_1_5x,a,,,"Focal point scale and crop to 1095x1260, Image Style Quality 35%, convert to WebP"
+,730x840 2x,730x840_2x,a,,,"Focal point scale and crop to 1460x1680, Image Style Quality 30%, convert to WebP"
+,730x840 Non-WebP,730x840_non-webp,a,,,Focal point scale and crop to 730x840
+,758x428,758x428,a,,,"Focal point scale and crop to 758x428, convert to WebP"
+,758x428 Non-WebP,758x428_non-webp,a,,,Focal point scale and crop to 758x428
+,874x492,874x492,a,,,"Focal point scale and crop to 874x492, convert to WebP"
+,874x492 1.5x,874x492_1_5x,a,,,"Focal point scale and crop to 1311x738, Image Style Quality 35%, convert to WebP"
+,874x492 2x,874x492_2x,a,,,"Focal point scale and crop to 1748x984, Image Style Quality 30%, convert to WebP"
+,874x492 Non-WebP,874x492_non-webp,a,,,Focal point scale and crop to 874x492
+,1096x619,1096x619,a,,,"Focal point scale and crop to 1096x619, convert to WebP"
+,1096x619 Non-WebP,1096x619_non-webp,a,,,Focal point scale and crop to 1096x619
+,1192x891,1192x897,a,,,"Focal point scale and crop to 1192x897, convert to WebP"
+,1440x1084,1440x1084,a,,,"Focal point scale and crop to 1440x1084, convert to WebP"
+,1440x1084 Non-WebP,1440x1084_non-webp,a,,,Focal point scale and crop to 1440x1084
+,1680x1260,1680x1260,a,,,"Focal point scale and crop to 1680x1280, convert to WebP"
+,1920x1445,1920x1445,a,,,"Focal point scale and crop to 1920x1445, convert to WebP"
+,Banner Wide Desk,banner_wide_desk,a,,,"Focal point scale and crop to 1920x1280, convert to WebP"
+,Banner Big Desk,banner_big_desk,a,,,"Focal point scale and crop to 1680x1120, convert to WebP"
+,Banner Desk,banner_desk,a,,,"Focal point scale and crop to 1194x786, convert to WebP"
+,Banner Desk Non-WebP,banner_desk_non_webp,a,,,Focal point scale and crop to 1194x786
+,Banner MidDesk,banner_middesk,a,,,"Focal point scale and crop to 1440x960, convert to WebP"
+,Banner Mobile,banner_mobile,a,,,"Focal point scale and crop to 393x262, convert to WebP"
+,Banner Mobile 1.5x,banner_mobile_1_5x,a,,,"Focal point scale and crop to 590x393, Image Style Quality 45%, convert to WebP"
+,Banner Mobile 2x,banner_mobile_2x,a,,,"Focal point scale and crop to 786x524, Image Style Quality 35%, convert to WebP"
+,Banner Tablet,banner_tablet,a,,,"Focal point scale and crop to 786x524, convert to WebP"
+,Banner Tablet 1.5x,banner_tablet_1_5x,a,,,"Focal point scale and crop to 1194x786, image style quality 35%, convert to WebP"
+,Banner Tablet 2x,banner_tablet_2x,a,,,"Focal point scale and crop to 1572x1048, image style quality 30%, convert to WebP"
+,Full (Non-Crop),full_non_crop,d,,,"Scale width 1200 upscaling allowed, convert to WebP"
+,Icon,icon,a,,,Scale width and height to 32
+,Large (480×480),large,x,,,
+,Large (Non-Crop),large_non_crop,d,,,"Scale width 800 upscaling allowed, convert to WebP"
+,Large non-crop Non-WebP,large_non_crop_non_webp,d,,,"Scale width 800, upscaling allowed"
+,Large Thumbnail,large_thumbnail,d,,,"Focal point scale and crop to 240x200, convert to WebP"
+,Large Thumbnail 1.5x,large_thumbnail_1_5x,d,,,"Focal point scale and crop to 360x300, image style quality 40%, convert to WebP"
+,Large Thumbnail 2x,large_thumbnail_2x,d,,,"Focal point scale and crop to 480x400, image style quality 35%, convert to WebP"
+,Large Thumbnail Non-WebP,large_thumbnail_non_webp,d,,,Focal point scale and crop to 240x200
+,Linkit Result Thumbnail,linkit_result_thumbnail,x,,,Scale and crop 50x50
+,Max 325x325,max_325_325,x,,,Scale 325x325
+,Max 650x650,max_650_650,x,,,Scale 650x650
+,Max 1300x1300,max_1300_1300,x,,,Scale 1300x1300
+,Max 2600x2600,max_2600_2600,x,,,Scale 2600x2600
+,Max-width (1200),maxwidth_1200,x,,,"Scale width 1200, upscaling allowed"
+,Media Library thumbnail (220×220),media_library,x,,,
+,Medium (220×220),medium,x,,,
+,Medium non-crop,medium_non_crop,d,,,"Scale width 480 upscaling allowed, convert to WebP"
+,Medium non-crop 1.5x,medium_non_crop_1_5x,d,,,"Scale width 720 upscaling allowed, image style quality 35%, convert to WebP"
+,Medium non-crop 2x,medium_non_crop_2x,d,,,"Scale width 960 upscaling allowed, image style quality 30%, convert to WebP"
+,Medium non-crop Non-WebP,medium_non_crop_non_webp,d,,,"Scale width 480, upscaling allowed"
+,Paragraphs Preview,paragraphs_preview,x,,,Scale and crop 50x30
+,Small non-crop,small_non_crop,d,,,"Scale width 280, convert to WebP"
+,Small non-crop 1.5x,small_non_crop_1_5x,d,,,"Scale width 420, image style quality 45%, convert to WebP"
+,Small non-crop 2x,small_non_crop_2x,d,,,"Scale width 560, image style quality 40%, convert to WebP"
+,Small non-crop Non-WebP,small_non_crop_non_webp,d,,,Scale width 280
+,Social Share,social_share,a,,,"Scale and crop to 1200x628px, NO FOCAL POINT, NO WEBP"
+,Thumbnail (100×100),thumbnail,x,,,
+,Thumbnail cropped,thumbnail_cropped,x,,,"Focal point scale and crop to 96x96, convert to WebP"
+,Thumbnail cropped 1.5x,thumbnail_cropped_1_5x,x,,,"Focal point scale and crop to 144x144, image style quality 45%, convert to WebP"
+,Thubmnail cropped 2x,thumbnail_cropped_2x,x,,,"Focal point scale and crop to 192x192, image style quality 40%, convert to WebP"
+,Views card,views_card,d,,,"Focal point scale and crop to 400x300, convert to WebP"
+,Views card 1.5x,views_card_1_5x,d,,,"Focal point scale and crop to 600x450, Image Style Quality 40%, convert to WebP"
+,Views card 2x,views_card_2x,d,,,"Focal point scale and crop to 800x600, Image Style Quality 35%, convert to WebP"
+,Views card Non-WebP,views_card_non_webp,d,,,Focal point scale and crop to 400x300

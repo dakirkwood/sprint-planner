@@ -1,0 +1,43 @@
+ID,View,Title,Machine name,X,Dev,QA,Display plugin,Notes,View ID
+,Announcements,Sitewide,Sitewide,d,,,Block,Displays published announcements for the set display range if sitewide is checked for announcement. Shows only the text field. Limit to one. Uses urgency as a views row tclass.,announcements
+,Announcements,By Section,by_section,d,,,Block,Displays published announcements for the set display range if the current URL matches the wild card URL set in the by section URL of the announcement. Shows only the text field. Uses urgency as a views row tclass.,announcements
+,Events,All Upcoming Events,all_upcoming_events,d,,,Embed,"Shows image, node title, date and summary. Exposed filter for keyword, category. Sorted by date (asc)",events
+,Events,Events List,events_list,d,,,Embed,"Shows image, node title, date and summary. Relationships from paragraph to category to node to only show events by the category selected on the paragraph. Contextual filter for paragraph id (hidden if blank). Only shows upcoming events. Sorted by date (asc).",events
+,Contact,By Placement Tag,by_tag,d,,,Block,Goes on department and college content types and should show the contact and hours teasers tagged with the matching tag. ,#N/A
+,Contact,By Page Family,by_family,d,,,Block,Goes at the bottom of general pages - shows contact/hours teasers from fields referenced in page family taxonomy. Pulls in social platforms from page family taxonomy.,#N/A
+,Departments,By College,by_college,a,,,Block,Goes on college nodes under the body field. Shows the department title (linked). Contextual filter for node Id by URL to show all departments related to the college (use relationship from college reference field).,departments
+,Facts,Facts List,list,a,,,Embed,Lists most recent facts with the matching placement tag or page family from the paragraph. Max of 5. Shows teaser. Uses paragraph fields to define the filters.,facts
+,Facts,Most Recent by Tag,recent_by_tag,a,,,Block,Shows up to the 5 most recently created facts. Filter for placement tag from the department/college/program. Expose items per page to block settings so can alter by content type.,facts
+,Facts,Facts Review,review,a,,,Page,Admin reporting page used to review facts who's expiration date is past.,facts
+,Jobs,Jobs,jobs,w,,,Embed,Need to define what is displayed and filters. Add search results counter header (see directory).,jobs
+,Profiles,All Staff,all_staff,d,,,Embed,"Shows photo, node title, position. Exposed filter for title, sorted by last name. asc",bios
+,Profiles,Profiles List,list,a,,,Embed,"Uses paragraph fields to define the filters, pager and sort.",bios
+,Profiles,Department Faculty,department_faculty,a,,,Block,"Shows random three teasers specific to the department, must have image to appear.",bios
+,Profiles,Program Faculty,program_faculty,a,,,Block,"Shows random three teasers specific to the program, must have image to appear.",bios
+,Profile Search,Directory,directory,a,,,Embed,Shows all profiles as teaser. Sorted by last name asc. Paged and filtered to match the mockups.,profile_search
+,Programs,Graduate,graduate,d,,,Embed,,programs
+,Programs,Programs by Department,by department,a,,,Block,Shows a list of majors/minors available in the department. View program link has '+ program node:title' visually hidden for screen reader context. Uses teaser view mode. Image not shown on mobile.,programs
+,Programs,Programs List,list,a,,,Block,"Uses paragraph fields to define the filters, pager and sort.",programs
+,Program Search,Program Search,program_search,a,,,Embed,"Build with search api. Keywords search should include: title, department, college, degree type, campus, major/minor, program length, mode of delivery, intro, description, example careers. Need additional custom search block (like global search) for program search paragraph. Multiple program accordions can be open by default. Image not shown at all on mobile.  Add results counter header -- see directory",program_search
+,Site Search,Search Results,search_results,d,,,Page,"Shows title, summary. Exposed filter for keyword. Sorted by relevance (desc), id (desc)",site_search
+,Snapshots,Snapshots List,list,a,,,Embed,"Lists most recent snapshot teasers with the matching placement, type or family. Max of three. Use a relationship to find the list widget term, then paragraphs using the list widget term. Add that relationship to a contextual filter for paragraph ID and hide the view when the filter is not available. You can use the Stories most recent 3 view display as an example of this. Add filters for: Published (true), content type (snapshot), placement tag (any term), type (any term), family (any term). Sort desc. Limit to three. ",snapshots
+,Snapshots,Most Recent,most_recent,a,,,Embed,Shows the most recently created snapshot as a teaser. Filter to only published snapshots. Contextual filter for placement tag from content URL (so that when this is on a department page only the most recent sapshot that matches the department placement tag is shown). Limit to one. Sort by created date desc.,snapshots
+,Snapshots,2nd Recent,second_recent,a,,,Embed,Shows the 2nd most recently created snapshot as a teaser. Filter to only published snapshots. Contextual filter for placement tag from content URL (so that when this is on a department page only the most recent sapshot that matches the department placement tag is shown). Limit to one and offset by one. Sort by created date desc.,snapshots
+,Stories,All Stories,all_news,a,,,Embed,"Shows image, node title, date and summary. Exposed filter for keyword, category. Sorted by created (desc)",news
+,Stories,Featured Stories,featured_stories,a,,,Attachment,Limited to 3 promoted stories. Does not inherit filters or pager,news
+,Stories,Stories List,list,d,,,Embed,Lists most recent stories with the matching placement tag.,news
+,Stories,Most Recent by Tag,recent_by_tag,a,,,Block,Shows the three most recently created stories. Filter for placement tag from the department/college/program etc by URL.,news
+,Stories,Most Recent,most_recent,a,,,Embed,Shows the most recently created story. Filter for placement tag. Get fields to display from content carousel in mockups,news
+,Stories,2nd Recent,second_recent,a,,,Embed,Shows the 2nd most recently created story. Filter for placement tag from the page. Get fields to display from content carousel in mockups,news
+,Stories,Most Recent 3,recent_three,a,,,Embed,Already built and used in the stories & video widget. Should be updated to use teaser view mode and type filter.,news
+,Stories,Most Recent 2,recent_two,a,,,Embed,Already built and used in the stories & video widget. Should be updated to use teaser view mode and type filter.,news
+,Stories,Related Stories,related_stories,a,,,Block,Added to story nodes. Shows next three most recent with same story type.,news
+,Testimonials,Testimonial List,list,a,,,Embed,"Most recent testimonial by placement tag, Render as teaser",testimonials
+,Testimonials,Testimonial Review,review,a,,,Page,Admin reporting page used to review testimonials who's add date is X old.,testimonials
+,Testimonials,Most Recent,most_recent,a,,,Embed,Shows the most recently created testimonial. Filter for placement tag. Get fields to display from content carousel in mockups,testimonials
+,Testimonials,2nd Recent,second_recent,a,,,Embed,Shows the 2nd most recently created testimonial. Filter for placement tag from the page. Get fields to display from content carousel in mockups,testimonials
+,User Dashboard,All Recent Content,all_recent_content,x,,,Block,Shows 10 most recently created nodes in table view similar to the /admin/content view,user_dashboard
+,User Dashboard,My Content,my_content,x,,,Block,Shows 10 most recently created nodes by the user who's dashboard is being viewed in a table similar to the recently created block.,user_dashboard
+,Video Cards,Most Recent Three,recent_three,a,,,Embed,Shows the three most recently created video card. Filters based on paragraph. Renders teaser.,video_cards
+,Video Cards,Most Recent,most_recent,a,,,Embed,Shows the most recently created video card. Filter for placement tag. Get fields to display from content carousel in mockups,video_cards
+,Video Cards,2nd Recent,second_recent,a,,,Embed,Shows the 2nd most recently created video card. Filter for placement tag. Get fields to display from content carousel in mockups,video_cards

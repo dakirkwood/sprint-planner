@@ -1,0 +1,3 @@
+ID,Label,Machine name,X,Dev,QA,Type,Notes
+,Marketing,marketing,a,,,Content moderation,Used on content types with 'Library' in the title (except contact and hours).
+,Non-moderated,non_moderated,a,,,Content moderation,Used on all other content types

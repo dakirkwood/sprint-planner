@@ -1,0 +1,8 @@
+ID,Workflow,Label,Machine name,X,Dev,QA,Notes
+,Marketing,Draft,draft,a,,,
+,Marketing,In review,review,a,,,
+,Marketing,Published,published,a,,,
+,Marketing,Archived,archived,a,,,
+,Non-moderated,Draft,draft,a,,,
+,Non-moderated,Published,published,a,,,
+,Non-moderated,Archived,archived,a,,,

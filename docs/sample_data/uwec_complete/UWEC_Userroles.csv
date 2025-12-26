@@ -1,0 +1,9 @@
+ID,Name,Machine name,X,Dev,QA,Notes
+,Administrator,administrator,x,,,
+,Anonymous user,anonymous,x,,,
+,Authenticated user,authenticated,x,,,
+,Site Admin,site_admin,a,,,Access to all content on all domains.
+,Site Manager,site_manager,x,,,Access to all content within their domain.
+,Section Manager,section_manager,a,,,Publish and archive permissions within their section.
+,Marketing Editor,marketing_editor,a,,,Can create library content but cannot edit it nor work with non-library content.
+,Editor,editor,x,,,Create and edit content within their section but can't delete or publish.

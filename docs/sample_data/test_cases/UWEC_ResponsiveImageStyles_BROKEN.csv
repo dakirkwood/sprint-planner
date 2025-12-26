@@ -1,0 +1,25 @@
+ID,Responsive style,Machine Name,Breakpoint Group,Breakpoints Used,Fallback Style,Image Style Group(s),X,Dev,QA,Notes,Fallback machine name
+,42x42,42x42,Citizen Patterns,"Mobile (1, 1.5x, 2x)",42x42 Non-WebP,42x42,a,,,,42x42_non-webp
+,200x200 non-crop,200x200_non_crop,Citizen Patterns,"Mobile (1, 1.5x, 2x)",200x200 (Non Crop) Non-WebP,200x200 Non Crop,a,,,,200x200_non_crop_non-webp
+,240x240,240x240,Citizen Patterns,"Mobile (1, 1.5x, 2x)",240x240 Non-WebP,240x240,a,,,,240x240_non-webp
+,393x221,393x221,Citizen Patterns,"Mobile (1, 1.5x, 2x)",393x221 Non-WebP,393x221,a,,,,
+,426x426,426x426,Citizen Patterns,"Mobile (1, 1.5x, 2x)",426x426 Non-WebP,"360x360,426x426",a,,,"Use 360x360 for mobile sizes, 426x426 at tab",
+,426x508,426x508,Citizen Patterns,"Mobile (1, 1.5x, 2x), Tablet (1, 1.5x, 2x)",426x508 Non-webp,"360x360,426x508",a,,,"Use 360x360 for mobile sizes, 426x508 at tab",
+,492x492,492x492,Citizen Patterns,"Mobile (1, 1.5x, 2x), Tablet (1, 1.5x, 2x)",492x492 Non-WebP,"393x221, 492x492",a,,,"Use 393x221 for mobile sizes, 492x492 at tab",
+,539x304,539x304,Citizen Patterns,"Mobile (1, 1.5x, 2x), Tablet (1, 1.5x, 2x)",539x304 Non-WebP,"393x221,539x304",a,,,"Use 393x221 for mobile sizes, 539x304 at tab",
+,650x650,650x650,Citizen Patterns,"Mobile (1, 1.5x, 2x), Tablet (1, 1.5x, 2x)",650x650 Non-WebP,"426x426,650x650",a,,,"Use 426x426 for mobile sizes, 650x650 at tab",
+,730x840,730x840,Citizen Patterns,"Mobile (1, 1.5x, 2x), Tablet (1, 1.5x, 2x)",730x840 Non-WebP,"426x508,730x840",a,,,"Use 426x508 for mobile sizes, 730x840 at tab",730x840_non-webp
+,758x428,758x428,Citizen Patterns,"Mobile (1, 1.5x, 2x), Tablet (1, 1.5x, 2x), Desk",758x428 Non-WebP,"393x221,539x304,758x428",a,,,"Use 393x221 for mobile sizes, 539x304 at tab & 758x428 at desk",758x428_non-webp
+,1096x619,1096x619,Citizen Patterns,"Mobile (1, 1.5x, 2x), Tablet (1, 1.5x, 2x), Desk",1096x619 Non-WebP,"393x221,539x304,1096x619",a,,,"Use 393x221 for mobile sizes, 539x304 at tab, 1096x619 at desk",1096x619_non-webp
+,874x492,874x492,Citizen Patterns,"Mobile (1, 1.5x, 2x), Tablet (1, 1.5x, 2x), Desk",874x492 Non-WebP,"393x221,539x304,874x492",a,,,"Use 393x221 for mobile sizes, 539x304 at tab & 874x492 at desk (only 1x for desk)",874x492_non-webp
+,1920x1445,1920x1445,Citizen Patterns,"Mobile (1, 1.5x, 2x), Tablet (1, 1.5x, 2x), Desk, Mid Desk, Big desk, Wide Desk",1440x1084 Non-WebP,"426x508, 874x492, 1192x897, 1440x1084, 1680x1260, 1920x1445",a,,,,1440x1084_non-webp
+,Banner,banner,Citizen Patterns,"Mobile (1, 1.5x, 2x), Tablet (1, 1.5x, 2x), Desk, Mid Desk, Large Desk, Wide Desk",Banner desk Non-WebP,Banner,a,,,,banner_desk_non_webp
+,Carousel Snapshot,carousel_snapshot,Citizen Patterns,"Mobile (1, 1.5x, 2x), Tablet (1, 1.5x, 2x), Desk",492x492 Non-WebP,"393x221,492x492",d,,,"Use 393x221 for mobile sizes, 492x492 at tab & desk",492x492_non-webp
+,Full non-crop,full_non_crop,Citizen Patterns,"Mobile (1, 1.5x, 2x), Tablet (1, 1.5x, 2x), Desk",Full non-crop Non-WebP,"Full non-crop, Medium non-crop, Small non-crop",d,,,,#N/A
+,Large non-crop,large_non_crop,Citizen Patterns,"Mobile (1, 1.5x, 2x), Tablet (1, 1.5x, 2x), Desk",Large non-crop Non-WebP,"Large non-crop, Medium non-crop, Small non-crop",d,,,,large_non_crop_non_webp
+,Large Thumbnail,large_thumbnail,Citizen Patterns,"Mobile (1, 1.5x, 2x)",Large Thumbnail Non-WebP,Large Thumbnail,d,,,,
+,Medium non-crop,medium_non_crop,Citizen Patterns,"Mobile (1, 1.5x, 2x), Tablet (1, 1.5x, 2x)",Medium non-crop Non-WebP,"Medium non-crop, Small non-crop",d,,,,
+,Small non-crop,small_non_crop,Citizen Patterns,"Mobile (1, 1.5x, 2x)",Small non-crop Non-WebP,Small non-crop,d,,,,small_non_crop_non_webp
+,Square,square,Citizen Patterns,"Mobile (1, 1.5x, 2x)",360x360 Non-WebP,360x360,x,,,,360x360_non-webp
+,Thumbnail Cropped,thumbnail_cropped,Citizen Patterns,"Mobile (1, 1.5x, 2x)",Thumbnail Cropped Non-WebP,Thumbnail Cropped,d,,,,#N/A
+,Views Card,views_card,Citizen Patterns,"Mobile (1, 1.5x, 2x)",Views Card Non-WebP,Views Card,d,,,,views_card_non_webp

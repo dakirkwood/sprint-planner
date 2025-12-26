@@ -1,0 +1,100 @@
+ID,Name,Machine name,X,Dev,QA,Description,Mod.,Layout,Trns.,Migr.,Meta,Sched.,Srch.,Type,URL alias pattern,Settings/notes
+,Academic Program,academic_program,a,,,Add program pages for majors and minors.,y,y,,y,y,n,y,Content type,academics/programs/[node:field_degree_level]/[node:title],Need teaser (for program finder & department programs) and thumbnail view modes (for related programs) - thumbnail view renders 393x221 image style
+,Announcement,announcement,a,,,Add a sitewide or section announcement,y,y,,n,n,n,n,Content type,announcements/[node:title],"Node not shown to anonymous users (use a Twig page template (see support book template). Site admins can add/edit/delete only. Set metatags for no index/nofollow, etc"
+,College,college,a,,,Use to add college pages.,y,y,,,y,n,y,Content type,academics/[node:title],Allow in main menu
+,Contact Library,contact,a,,,Add contact information for department and general pages.,y,y,,y,n,n,n,Content type,contact/[node:title],"Set a metatag for noindex, nofollow, etc. Add page template to restrict access to logged in users. Market editors and site admins only"
+,Department,department,a,,,Use to add department pages.,y,y,,,y,n,y,Content type,academics/[node:field_college]/departments-programs/[node:menu-link:parents:join:/]/[node:title],Allow in department menu
+,Event,event,d,,,Create an upcoming event.,y,y,,n,y,n,n,Content type,events/[node:title],Allows promotion
+,Fact Library,fact,a,,,Add facts to be used around the site.,y,y,,y,n,n,n,Content type,fact/[node:title],"Set a metatag for noindex, nofollow, etc. Add page template to restrict access to logged in users. Market editors and site admins only"
+,General Pages,page,a,,,Use general pages for text heavy lower-level pages that can be reached through the sidebar menu.,y,y,,y,y,n,y,Content type,[node:menu-link:parents:join:/]/[node:title],Set a metatag for the home page to use a custom title and not the node title for the page title.
+,Hours Library,hours,a,,,Add hours for department and general pages.,y,y,,y,n,n,n,Content type,hours/[node:title],"Set a metatag for noindex, nofollow, etc. Add page template to restrict access to logged in users. Market editors and site admins only"
+,Job,job,a,,,Add job posting information.,y,y,,,y,n,n,Content type,jobs/[node:title],Need hard coded links for application and benefit estimator on the front-end of the node theme. NOTE: May not do this—hold until very end.
+,Landing Page,landing_page,d,,,Use for the home page and highly designed upper-level pages.,y,y,,,y,n,n,Content type,[node:menu-link:parents:join:/]/[node:title],
+,Profile,bio,a,,,Add profile information for a person.,y,y,,y,y,n,y,Content type,profiles/[node:title],"Username field becomes the node title using autoentity label, title field hidden."
+,Snapshot Library,snapshot,a,,,Add snapshot content for placement around the site.,y,y,,,n,n,n,Content type,snapshot/[node:title],"Set a metatag for noindex, nofollow, etc. Add page template to restrict access to logged in users. Market editors and site admins only"
+,Story Library,news,a,,,Add time sensitive story content.,y,y,,,y,y,y,Content type,stories/[node:title],"Potentially scheduled (need confirmation). Add teaser view mode that shows story image, intro text, link to story. Allows promotion"
+,Testimonial Library,testimonial,a,,,Add testimonials for placement around the site.,y,y,,y,n,n,n,Content type,testimonial/[node:title],"Set a metatag for noindex, nofollow, etc. Add page template to restrict access to logged in users. Market editors and site admins only"
+,Video Card Library,video_card,a,,,Add curated videos for placement around the site.,y,y,,,n,n,n,Content type,video-cards/[node:title],"Set a metatag for noindex, nofollow, etc. Add page template to restrict access to logged in users. Market editors and site admins only"
+,Support Book,office,a,,,Create support book pages.,n,y,,,n,n,n,Content type,[node:menu-link:parents:join:/]/[node:title],
+,,,,,,,,,,,,,,,,
+,Document,document,x,,,Add documents as media entities.,n,n,,,n,n,n,Media type,-,
+,Image,image,x,,,Add images as media entities.,n,n,,,n,n,n,Media type,-,
+,Icon,icon,a,,,Add icons as media entities,n,n,,,n,n,n,Media type,-,"Meant to be used for Material.io Icons for steps. Ideally, all icons would be added by site admins directly in media and the media library does not allow upload."
+,Remote Video,remote_video,x,,,Embed remote video from YouTube or Vimeo.,n,n,,,n,n,n,Media type,-,
+,,,,,,,,,,,,,,,,
+,Basic Block,basic,x,,,A basic block contains a title and a body.,n,n,,,n,n,n,Custom block type,-,
+,Formatted Promo,formatted_promo,a,,,Add promo text with a link and formatted header.,n,n,,,n,n,n,Custom block type,-,Only site admins can access.
+,Page Structured Section,structured_section,a,,,Add a highly structured blue secondary section for use on the home page or campaign pages.,n,n,,,n,n,n,Custom block type,-,Only site admins can access.
+,Newsletter,newsletter,d,,,Used for embedded newsletter signup blocks.,n,n,,,n,n,n,Custom block type,-,
+,Reusable Widgets,reusable_widgets,a,,,Add widgets for reuse around the site.,n,n,,,n,n,n,Custom block type,-,Only site admins can access.
+,Social Media Links,social_media_links,x,,,Add links to social media platforms.,n,n,,,n,n,n,Custom block type,-,Only site admins can access.
+,,,,,,,,,,,,,,,,
+,Author,author,w,,,Define story authors.,n,n,,,n,n,n,Vocabulary,-,If the author has a profile assigned then the authors name is linked to the profile wherever it appears. Only site admins can access.
+,Campuses,campuses,a,,,"Campuses for programs, departments, etc.",n,n,,,n,n,n,Vocabulary,-,Only site admins can use.
+,Degree Type,degree_type,a,,,Degree types for programs.,n,n,,,n,n,n,Vocabulary,-,Only site admins can use.
+,Editorial Access,Editorial Access,a,,,Terms that control editorial access.,n,n,,,n,n,n,Vocabulary,-,Only site admins can use.
+,Employment Category,employment_category,a,,,,n,n,,,n,n,n,Vocabulary,-,Only site admins can use.
+,Employment Type,employment_type,a,,,,n,n,,,n,n,n,Vocabulary,-,Only site admins can use.
+,Events Categories,events_categories,d,,,Categories for events.,n,n,,,n,n,n,Vocabulary,-,
+,Eyebrows,eyebrows,a,,,Eyebrow text for use with wayfinding widgets.,n,n,,,n,n,n,Vocabulary,-,Only site admins can use.
+,Interest Types,interest_types,a,,,Interest type classifications for job postings.,n,n,,,n,n,n,Vocabulary,-,
+,List Widgets,list_widget,x,,,Types of lists used in content placer widget.,n,n,,,n,n,n,Vocabulary,-,No access permissions at all (only actual Drupal developer admins)
+,Media Tags,media_tags,a,,,Used for categorizing images and video for searching in the medai library.,n,n,,,n,n,n,Vocabulary,-,
+,Modes of Delivery,delivery_modes,a,,,How programs are delivered to students.,n,n,,,n,n,n,Vocabulary,-,
+,Page Families,page_families,a,,,Used for grouping pages to place data.,n,n,,,n,n,n,Vocabulary,-,Only site admins can use.
+,Placement Tags,placement_tags,a,,,Add tags for referencing and grouping content.,n,n,,,n,n,n,Vocabulary,-,Only site admins can use.
+,Program Types,program_types,a,,,Types of programs for search.,n,n,,,n,n,n,Vocabulary,-,
+,Section Styles,section_styles,d,,,Sets styles for paragraph sections.,n,n,,,n,n,n,Vocabulary,-,
+,Snapshot Types,snapshot_types,a,,,Used differentiate types of snapshots.,n,n,,,n,n,n,Vocabulary,-,
+,News Categories,news_categories,d,,,Categories for stories.,n,n,,,n,n,n,Vocabulary,-,
+,Story Types,story_types,a,,,Define the intent of story nodes.,n,n,,,n,n,n,Vocabulary,-,
+,,,,,,,,,,,,,,,,
+,Accordion Item,accordion_item,a,,,Adds WYSIWYG content inside accordions.,n,n,,,n,n,f,Paragraph type,-,"Only site admins can create, all can delete and edit."
+,Accordions,accordions,a,,,Creates structure for accordion items.,n,n,,y,n,n,f,Paragraph type,-,"Only site admins can create, all can delete and edit."
+,Additional Links,links_files,a,,,Creates a list of links and/or file document media references.,n,n,,,n,n,n,Paragraph type,-,
+,Block Placer,block_placer,a,,,Displays blocks from the custom block library.,n,n,,,n,n,n,Paragraph type,-,
+,Button,button,a,,,Add a button to a page.,n,n,,,n,n,n,Paragraph type,-,
+,Contact Placer,contact_placer,a,,,Add contact information to a page.,n,n,,,n,n,n,Paragraph type,-,
+,Content Carousel,content_carousel,a,,,Add carousel content to the page.,n,n,,,n,n,n,Paragraph type,-,
+,Courses,courses,w,,,Add sample course to a program.,n,n,,,n,n,f,Paragraph type,-,
+,Course,course,w,,,Add a course to a sample courses list.,n,n,,,n,n,f,Paragraph type,-,
+,CTA Item,cta_item,a,,,Add a call to action.,n,n,,,n,n,n,Paragraph type,-,"Only site admins can create, all can delete and edit."
+,CTAs,ctas,a,,,Add a group of CTAs.,n,n,,,n,n,n,Paragraph type,-,"Only site admins can create, all can delete and edit."
+,Custom Embed,custom_embed,a,,,Add custom HTML/JS code to a page.,n,n,,y,n,n,n,Paragraph type,-,Only admins can add/edit.
+,Events List,events_list,a,,,Add a list of LiveWhale events to the site.,n,n,,,n,n,n,Paragraph type,-,
+,Facts List,facts_list,a,,,Add a list of facts to a page.,n,n,,,n,n,n,Paragraph type,-,
+,Fauxfile Item,fauxfile_item,a,,,Add bio data to the fauxfile list.,n,n,,,n,n,n,Paragraph type,-,
+,Fauxfile,fauxfile,a,,,Add a list of manually entered bio data.,n,n,,,n,n,n,Paragraph type,-,"Only site admins can create, all can delete and edit."
+,Form Placer,form_placer,d,,,Display a webform on a page.,n,n,,,n,n,n,Paragraph type,-,"Only site admins can create and delete, all edit. "
+,Gallery Item,gallery_item,a,,,Add photos to a gallery.,n,n,,,n,n,n,Paragraph type,-,
+,Gallery,gallery,a,,,Create a lightbox or slide show photo gallery.,n,n,,y,n,n,n,Paragraph type,-,
+,Hallmark,hallmark,a,,,Add hallmark content to pages.,n,n,,n,n,n,f,Paragraph type,-,
+,Hero,hero,a,,,Add hero content to a page.,n,n,,n,n,n,f,Paragraph type,-,Only site admins can access. 
+,Highlight Box,highlight_box,a,,,Highlight a piece of important content on a page.,n,n,,,n,n,n,Paragraph type,-,
+,Horizontal Rule,horizontal_rule,d,,,Add a horizontal rule design element to break up blocks of content.,n,n,,,n,n,n,Paragraph type,-,No fields needed for this bundle
+,Hours Placer,hours_placer,a,,,Add hours on a page.,n,n,,,n,n,n,Paragraph type,-,
+,Hours Set,hours_set,a,,,Add a set hours to an hours library.,n,n,,,n,n,n,Paragraph type,-,
+,Image,image,a,,,Creates a linkable image in various sizes.,n,n,,y,n,n,n,Paragraph type,-,
+,Layout Section,layout_section,a,,,Add a customizable section of widgets to a page.,n,n,,,n,n,n,Paragraph type,-,"Only site admins can create, all can edit or remove."
+,Limited Section,layout_section_single,d,,,Single column layout with no additional fields.,n,n,,,n,n,n,Paragraph type,-,
+,Map,map,d,,,Add a google map of a single location.,n,n,,,n,n,n,Paragraph type,-,Use Adam's Google API Key until we get theirs
+,Portal,portal,d,,,Add a portal link with limited information to another page or external URL.,n,n,,,n,n,n,Paragraph type,-,
+,Portals,portals,d,,,Add a group of portals.,n,n,,,n,n,n,Paragraph type,-,
+,Profiles List,profiles_list,a,,,"Add list of bios for a specific department, program or tag or create a list manually.",n,n,,y,n,n,n,Paragraph type,-,
+,Programs List,programs_list,a,,,Add a list of programs to a page.,n,n,,,n,n,n,Paragraph type,-,Only site admins can add/edit. Use Twig to insert custom module created program search block.
+,Program Search,program_search,a,,,Add a program search block to page content.,n,n,,,n,n,n,Paragraph type,-,Only site admins can add/edit. Use Twig to insert custom module created program search block.
+,Quote,quote,a,,,Displays text with stylized quotation marks.,n,n,,,n,n,n,Paragraph type,-,Shown on story mockup
+,Select Item,select_item,a,,,Add a stylized list of selectable option links.,n,n,,,n,n,n,Paragraph type,-,"Only site admins can create, all can delete and edit."
+,Select Type,select_type,a,,,Add a select item to the select type widget.,n,n,,,n,n,n,Paragraph type,-,"Only site admins can create, all can delete and edit. Selects sized based on number used. Always fit to one line."
+,Slate Form,slate_form,a,,,Add a slate form to a page.,n,n,,,n,n,n,Paragraph type,-,Likely can just be a checkbox on the program CT
+,Snapshot List,snapshot_list,a,,,Add a list of snapshot items by tag or choose specific ones.,n,n,,,n,n,n,Paragraph type,-,
+,Social Media Links,social_media_links,a,,,Add links to social media platforms.,n,n,,y,n,n,n,Paragraph type,-,
+,Steps,steps,a,,,Add stylized stepped content.,n,n,,,n,n,f,Paragraph type,-,
+,Step Item,step_item,a,,,Add a step to steps.,n,n,,,n,n,f,Paragraph type,-,Individual steps sized based on number used. Always fit on one row.
+,Stories & Video List,stories_video_list,a,,,Add a video with a list of stories.,n,n,,,n,n,n,Paragraph type,-,
+,Testimonial Placer,testimonial_placer,a,,,Add list of testimonials for tag or create a list manually.,n,n,,y,n,n,n,Paragraph type,-,Only site admins can use
+,Text,text,x,,,Allows WYSIWYG text,n,n,,y,n,n,f,Paragraph type,-,
+,Video,video,x,,,Display a responsive Youtube or Vimeo video from the web or media library.,n,n,,y,n,n,n,Paragraph type,-,
+,Video Card List,video_card_list,d,,,Add a list of video cards to a page.,n,n,,,n,n,n,Paragraph type,-,
+,View Placer,view_placer,a,,,Place main views around the site,n,n,,,n,n,n,Paragraph type,-,"Only site admins can use. The selected view will embed the 'main' display for the view (via twig). ""Main' denotes any embed display not used in placer/list paragraphs or the content carousel. If there are multiple displays for a view that need to be placed using this widget, we'll need to add a display field."
+,Wayfinding,wayfinding,a,,,Add wayfinding navigational content.,n,n,,,n,n,n,Paragraph type,-,"Only site admins can create, all can delete and edit."
