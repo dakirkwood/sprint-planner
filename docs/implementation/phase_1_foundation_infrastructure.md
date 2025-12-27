@@ -19,40 +19,56 @@ Build the foundational layer including database models, repository interfaces an
 5. Implement code to make tests pass
 6. Verify coverage >80%
 
+### Pytest Markers for Phase 1
+
+All Phase 1 tests use the `@pytest.mark.phase1` marker combined with component markers:
+
+| Component | Marker | Description |
+|-----------|--------|-------------|
+| Models | `@pytest.mark.models` | SQLAlchemy model field/relationship tests |
+| Repositories | `@pytest.mark.repositories` | Repository CRUD and query tests |
+| Infrastructure | `@pytest.mark.infrastructure` | Redis/ARQ connection tests |
+| Migrations | `@pytest.mark.integration` | Database schema verification |
+
 ---
 
 ## Part 1: Test Infrastructure Setup
 
-### 1.1 Create Test Directory Structure
+### 1.1 Test Directory Structure
+
+Tests are organized by type (unit/integration) rather than by phase. Phase markers allow running phase-specific tests during development.
 
 ```
 tests/
-â”œâ”€â”€ conftest.py                    # Shared fixtures
-â”œâ”€â”€ factories/                     # Factory Boy model factories
-â”‚   â”œâ”€â”€ __init__.py
-â”‚   â”œâ”€â”€ session_factory.py
-â”‚   â”œâ”€â”€ ticket_factory.py
-â”‚   â”œâ”€â”€ upload_factory.py
-â”‚   â””â”€â”€ auth_factory.py
-â”œâ”€â”€ phase_1_foundation/
-â”‚   â”œâ”€â”€ __init__.py
-â”‚   â”œâ”€â”€ test_models/
-â”‚   â”‚   â”œâ”€â”€ __init__.py
-â”‚   â”‚   â”œâ”€â”€ test_session_models.py
-â”‚   â”‚   â”œâ”€â”€ test_ticket_models.py
-â”‚   â”‚   â”œâ”€â”€ test_upload_models.py
-â”‚   â”‚   â”œâ”€â”€ test_auth_models.py
-â”‚   â”‚   â””â”€â”€ test_error_models.py
-â”‚   â”œâ”€â”€ test_repositories/
-â”‚   â”‚   â”œâ”€â”€ __init__.py
-â”‚   â”‚   â”œâ”€â”€ test_session_repository.py
-â”‚   â”‚   â”œâ”€â”€ test_ticket_repository.py
-â”‚   â”‚   â”œâ”€â”€ test_upload_repository.py
-â”‚   â”‚   â”œâ”€â”€ test_auth_repository.py
-â”‚   â”‚   â””â”€â”€ test_error_repository.py
-â”‚   â”œâ”€â”€ test_migrations.py
-â”‚   â””â”€â”€ test_infrastructure.py
-â””â”€â”€ pytest.ini
+├── conftest.py                           # Shared fixtures
+├── pytest.ini                            # Marker configuration
+│
+└── backend/
+    ├── unit/
+    │   ├── test_models/
+    │   │   ├── test_session_models.py    # @pytest.mark.phase1, @pytest.mark.models
+    │   │   ├── test_ticket_models.py     # @pytest.mark.phase1, @pytest.mark.models
+    │   │   ├── test_upload_models.py     # @pytest.mark.phase1, @pytest.mark.models
+    │   │   ├── test_auth_models.py       # @pytest.mark.phase1, @pytest.mark.models
+    │   │   └── test_error_models.py      # @pytest.mark.phase1, @pytest.mark.models
+    │   └── test_repositories/
+    │       ├── test_session_repository.py    # @pytest.mark.phase1, @pytest.mark.repositories
+    │       ├── test_ticket_repository.py     # @pytest.mark.phase1, @pytest.mark.repositories
+    │       ├── test_upload_repository.py     # @pytest.mark.phase1, @pytest.mark.repositories
+    │       ├── test_auth_repository.py       # @pytest.mark.phase1, @pytest.mark.repositories
+    │       └── test_error_repository.py      # @pytest.mark.phase1, @pytest.mark.repositories
+    │
+    ├── integration/
+    │   └── test_database/
+    │       └── test_migrations.py        # @pytest.mark.phase1, @pytest.mark.integration
+    │
+    └── fixtures/
+        └── factories/
+            ├── __init__.py
+            ├── session_factory.py
+            ├── ticket_factory.py
+            ├── upload_factory.py
+            └── auth_factory.py
 ```
 
 ### 1.2 Core Test Fixtures (conftest.py)
@@ -143,7 +159,7 @@ def sample_ticket_data(sample_session_data):
 ### 2.1 Session Model Tests
 
 ```python
-# tests/phase_1_foundation/test_models/test_session_models.py
+# tests/backend/unit/test_models/test_session_models.py
 import pytest
 from datetime import datetime
 from uuid import uuid4
@@ -153,6 +169,8 @@ from app.models.session import Session, SessionTask, SessionValidation
 from app.schemas.base import SessionStage, SessionStatus, TaskType, TaskStatus, AdfValidationStatus
 
 
+@pytest.mark.phase1
+@pytest.mark.models
 class TestSessionModel:
     """Test Session model field definitions and relationships."""
     
@@ -225,6 +243,8 @@ class TestSessionModel:
         assert 'tickets' in relationships
 
 
+@pytest.mark.phase1
+@pytest.mark.models
 class TestSessionTaskModel:
     """Test SessionTask model for background task tracking."""
     
@@ -261,6 +281,8 @@ class TestSessionTaskModel:
         assert expected == actual
 
 
+@pytest.mark.phase1
+@pytest.mark.models
 class TestSessionValidationModel:
     """Test SessionValidation model for ADF validation tracking."""
     
@@ -299,14 +321,17 @@ class TestSessionValidationModel:
 ### 2.2 Ticket Model Tests
 
 ```python
-# tests/phase_1_foundation/test_models/test_ticket_models.py
+# tests/backend/unit/test_models/test_ticket_models.py
 import pytest
 from sqlalchemy import inspect
 
 from app.models.ticket import Ticket, TicketDependency, Attachment
+from app.models.session import Session
 from app.schemas.base import JiraUploadStatus
 
 
+@pytest.mark.phase1
+@pytest.mark.models
 class TestTicketModel:
     """Test Ticket model field definitions."""
     
@@ -359,6 +384,8 @@ class TestTicketModel:
         assert ticket.ready_for_jira is False
 
 
+@pytest.mark.phase1
+@pytest.mark.models
 class TestTicketDependencyModel:
     """Test TicketDependency junction table."""
     
@@ -378,6 +405,8 @@ class TestTicketDependencyModel:
         assert 'dependency_ticket' in relationships
 
 
+@pytest.mark.phase1
+@pytest.mark.models
 class TestAttachmentModel:
     """Test Attachment model."""
     
@@ -408,11 +437,13 @@ class TestAttachmentModel:
 ### 2.3 Migration Tests
 
 ```python
-# tests/phase_1_foundation/test_migrations.py
+# tests/backend/integration/test_database/test_migrations.py
 import pytest
 from sqlalchemy import inspect, text
 
 
+@pytest.mark.phase1
+@pytest.mark.integration
 class TestMigrations:
     """Test that migrations create expected database schema."""
     
@@ -480,7 +511,7 @@ class TestMigrations:
 ### 3.1 Session Repository Tests
 
 ```python
-# tests/phase_1_foundation/test_repositories/test_session_repository.py
+# tests/backend/unit/test_repositories/test_session_repository.py
 import pytest
 from uuid import uuid4
 from datetime import datetime
@@ -489,6 +520,8 @@ from app.repositories.sqlalchemy.session_repository import SQLAlchemySessionRepo
 from app.schemas.base import SessionStage, TaskType, TaskStatus
 
 
+@pytest.mark.phase1
+@pytest.mark.repositories
 class TestSessionRepositoryCRUD:
     """Test basic CRUD operations."""
     
@@ -539,6 +572,8 @@ class TestSessionRepositoryCRUD:
         assert len(sessions) == 2
 
 
+@pytest.mark.phase1
+@pytest.mark.repositories
 class TestSessionRepositoryStageTransitions:
     """Test stage transition operations."""
     
@@ -574,6 +609,8 @@ class TestSessionRepositoryStageTransitions:
         assert can_transition is False
 
 
+@pytest.mark.phase1
+@pytest.mark.repositories
 class TestSessionRepositoryTaskOperations:
     """Test SessionTask aggregate operations."""
     
@@ -618,6 +655,8 @@ class TestSessionRepositoryTaskOperations:
         assert task.failure_context == error_context
 
 
+@pytest.mark.phase1
+@pytest.mark.repositories
 class TestSessionRepositoryValidationOperations:
     """Test SessionValidation aggregate operations."""
     
@@ -684,13 +723,15 @@ class TestSessionRepositoryValidationOperations:
 ### 4.1 Redis/ARQ Connection Tests
 
 ```python
-# tests/phase_1_foundation/test_infrastructure.py
+# tests/backend/unit/test_infrastructure/test_redis_arq.py
 import pytest
 from arq.connections import ArqRedis
 
 from app.core.redis import get_redis_settings, create_arq_pool
 
 
+@pytest.mark.phase1
+@pytest.mark.infrastructure
 class TestRedisConnection:
     """Test Redis connectivity and ARQ pool creation."""
     
@@ -803,7 +844,8 @@ alembic upgrade head
 
 ### All Tests Pass
 ```bash
-pytest tests/phase_1_foundation/ -v --cov=app/models --cov=app/repositories --cov-report=term-missing
+# Run all Phase 1 tests
+pytest -m phase1 -v --cov=app/models --cov=app/repositories --cov-report=term-missing
 ```
 
 ### Coverage Requirements
@@ -830,14 +872,23 @@ pytest tests/phase_1_foundation/ -v --cov=app/models --cov=app/repositories --co
 # Install dependencies
 pip install pytest pytest-asyncio pytest-cov factory-boy httpx
 
-# Run Phase 1 tests only
-pytest tests/phase_1_foundation/ -v
+# Run all Phase 1 tests
+pytest -m phase1 -v
 
-# Run with coverage
-pytest tests/phase_1_foundation/ -v --cov=app --cov-report=html
+# Run Phase 1 tests with coverage
+pytest -m phase1 -v --cov=app --cov-report=html
 
-# Run specific test file
-pytest tests/phase_1_foundation/test_models/test_session_models.py -v
+# Run only Phase 1 model tests
+pytest -m "phase1 and models" -v
+
+# Run only Phase 1 repository tests
+pytest -m "phase1 and repositories" -v
+
+# Run only Phase 1 infrastructure tests
+pytest -m "phase1 and infrastructure" -v
+
+# Run Phase 1 integration tests (migrations)
+pytest -m "phase1 and integration" -v
 
 # Apply migrations
 alembic upgrade head
