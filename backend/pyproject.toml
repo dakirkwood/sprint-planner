@@ -1,0 +1,77 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "drupal-ticket-generator"
+version = "0.1.0"
+description = "Web application that converts CSV files containing Drupal configuration data into structured Jira tickets"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [
+    {name = "Drupal Ticket Generator Team"}
+]
+
+dependencies = [
+    "fastapi>=0.109.0",
+    "uvicorn[standard]>=0.27.0",
+    "pydantic>=2.5.0",
+    "pydantic-settings>=2.1.0",
+    "sqlalchemy>=2.0.25",
+    "asyncpg>=0.29.0",
+    "alembic>=1.13.0",
+    "arq>=0.25.0",
+    "redis>=5.0.0",
+    "httpx>=0.26.0",
+    "python-multipart>=0.0.6",
+    "cryptography>=41.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-asyncio>=0.23.0",
+    "pytest-cov>=4.1.0",
+    "factory-boy>=3.3.0",
+    "httpx>=0.26.0",
+    "aiosqlite>=0.19.0",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+markers = [
+    "phase1: Phase 1 - Foundation & Infrastructure (models, repositories, Redis/ARQ)",
+    "phase2: Phase 2 - Authentication & Session Management",
+    "phase3: Phase 3 - File Upload & CSV Validation",
+    "phase4: Phase 4 - Processing & Ticket Generation",
+    "phase5: Phase 5 - Review Stage",
+    "phase6: Phase 6 - Jira Export",
+    "models: SQLAlchemy model tests",
+    "repositories: Repository layer tests",
+    "services: Service layer tests",
+    "api: API endpoint tests",
+    "integrations: External integration tests (Jira, LLM)",
+    "workers: ARQ worker/job tests",
+    "infrastructure: Infrastructure tests (Redis, database connections)",
+    "unit: Unit tests (mocked dependencies)",
+    "integration: Integration tests (real database, mocked external APIs)",
+    "e2e: End-to-end tests",
+    "slow: Tests that take longer to run",
+]
+
+[tool.coverage.run]
+source = ["app"]
+omit = ["*/tests/*", "*/__pycache__/*"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "raise NotImplementedError",
+    "if __name__ == .__main__.:",
+]
